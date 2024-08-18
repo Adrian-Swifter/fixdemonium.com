@@ -319,10 +319,10 @@ export default function Home() {
         </div>
 
         {/* Mission Control Section */}
-        <div className="w-full bg-emerald-300 text-white py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="w-full text-white py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="md:flex justify-center">
             <Image
-              src="/images/test.png" // Replace with actual image
+              src="/images/test.png"
               alt="Mission Control"
               width={400}
               height={400}
@@ -330,10 +330,10 @@ export default function Home() {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-emerald-400 mb-8">
+            <h2 className="text-3xl font-bold text-emerald-400 mb-8 px-4">
               One-Time Fix
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-6 px-4">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Explain the issue
@@ -368,7 +368,7 @@ export default function Home() {
             <div className="mt-8">
               <a
                 href="#"
-                className="inline-block bg-emerald-400 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-emerald-500"
+                className="inline-block bg-emerald-400 text-white px-8 py-4 mx-4 text-lg font-bold hover:bg-emerald-500"
               >
                 ORDER ONE-TIME FIX
               </a>
@@ -393,7 +393,7 @@ export default function Home() {
                 reviews.map((review, index) => (
                   <div
                     key={index}
-                    className="border rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow bg-gray-50"
+                    className=" p-6 hover:shadow-xl transition-shadow"
                   >
                     {/* User Info */}
                     <div className="flex items-center mb-4">
@@ -427,7 +427,7 @@ export default function Home() {
                           key={i}
                           className={`w-5 h-5 ${
                             i < review.rating
-                              ? "text-green-500"
+                              ? "text-emerald-400"
                               : "text-gray-300"
                           }`}
                           fill="currentColor"
@@ -440,7 +440,7 @@ export default function Home() {
                     </div>
 
                     {/* Review Title */}
-                    <h2 className="text-lg font-semibold mb-2 text-blue-800">
+                    <h2 className="text-lg font-semibold mb-2 text-gray-800">
                       {review.title}
                     </h2>
 
