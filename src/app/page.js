@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Roboto } from "next/font/google";
+import { Lora } from "next/font/google";
 import Head from "next/head";
 import Script from "next/script";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const roboto = Roboto({
+const roboto = Lora({
   weight: "400",
   subsets: ["latin"],
 });
