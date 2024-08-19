@@ -5,6 +5,9 @@ import Image from "next/image";
 import { Roboto } from "next/font/google";
 import Head from "next/head";
 import Script from "next/script";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const roboto = Roboto({
   weight: "400",
@@ -43,6 +46,31 @@ export default function Home() {
       .map((word) => word[0])
       .join("");
     return initials.toUpperCase();
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -318,7 +346,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Mission Control Section */}
+        {/* Video and text Section */}
         <div className="w-full text-white py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="md:flex justify-center">
             <Image
@@ -331,37 +359,40 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-3xl font-bold text-emerald-400 mb-8 px-4">
-              One-Time Fix
+              WordPress Site Fixing Lifecycle
             </h2>
             <div className="space-y-6 px-4">
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  Explain the issue
+                  Submit Your Issue
                 </h3>
                 <p className="text-gray-600">
-                  Use our ticketing system to send a detailed description of the
-                  issue you’re having – then we’ll ask for login details so we
-                  can fix your site.
+                  Tell us what’s wrong using contact form or live chat. Provide
+                  a brief description of the issue, and we’ll take it from
+                  there. After reviewing your submission, we’ll request access
+                  to your site to get started.
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  Troubleshooting and fixing
+                  Expert Troubleshooting & Resolution
                 </h3>
                 <p className="text-gray-600">
-                  We’ll copy your website to the staging environment to debug
-                  the issue without harming the live website in the process.
-                  After the issue is resolved, we’ll apply the fix on the live
+                  We don’t just patch things up. Our experts dive deep into your
+                  site’s code using a secure staging environment, ensuring your
+                  live website stays unaffected. Once we’ve diagnosed and
+                  resolved the issue, we’ll safely apply the fix to your live
                   site.
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  Pay for the results
+                  Satisfaction Guaranteed
                 </h3>
                 <p className="text-gray-600">
-                  After you review your website and confirm the fix was 100%
-                  successful, we’ll send you the payment link.
+                  We believe in results. That’s why you only pay when the job is
+                  done and you’re completely satisfied with our work. No hidden
+                  fees, just effective solutions.
                 </p>
               </div>
             </div>
@@ -388,80 +419,82 @@ export default function Home() {
               Error loading reviews: {error}
             </p>
           ) : (
-            <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <Slider {...settings}>
               {reviews.length > 0 ? (
                 reviews.map((review, index) => (
                   <div
                     key={index}
-                    className=" p-6 hover:shadow-xl transition-shadow"
+                    className="p-4 flex justify-center items-stretch"
                   >
-                    {/* User Info */}
-                    <div className="flex items-center mb-4">
-                      {review.avatar ? (
-                        <img
-                          src={review.avatar}
-                          alt={review.name}
-                          className="w-12 h-12 rounded-full mr-4"
-                        />
-                      ) : (
-                        <div className="w-12 h-12 rounded-full bg-teal-600 text-white flex items-center justify-center mr-4">
-                          <span className="font-bold">
-                            {getInitials(review.name)}
-                          </span>
+                    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between min-h-full">
+                      {/* User Info */}
+                      <div className="flex items-center mb-4">
+                        {review.avatar ? (
+                          <img
+                            src={review.avatar}
+                            alt={review.name}
+                            className="w-12 h-12 rounded-full mr-4"
+                          />
+                        ) : (
+                          <div className="w-12 h-12 rounded-full bg-teal-600 text-white flex items-center justify-center mr-4">
+                            <span className="font-bold">
+                              {getInitials(review.name)}
+                            </span>
+                          </div>
+                        )}
+                        <div>
+                          <h4 className="font-semibold text-gray-800">
+                            {review.name}
+                          </h4>
+                          <p className="text-gray-500 text-sm">
+                            {review.location}
+                          </p>
                         </div>
-                      )}
-                      <div>
-                        <h4 className="font-semibold text-gray-800">
-                          {review.name}
-                        </h4>
-                        <p className="text-gray-500 text-sm">
-                          {review.location}
-                        </p>
                       </div>
+
+                      {/* Star Rating */}
+                      <div className="flex items-center mb-2">
+                        {[...Array(5)].map((_, i) => (
+                          <svg
+                            key={i}
+                            className={`w-5 h-5 ${
+                              i < review.rating
+                                ? "text-emerald-400"
+                                : "text-gray-300"
+                            }`}
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M9.049 2.927a.997.997 0 011.902 0l1.92 5.885h6.191c.85 0 1.204 1.091.516 1.583l-5.003 3.637 1.92 5.885c.35 1.071-.916 1.963-1.83 1.279l-5.003-3.637-5.003 3.637c-.914.684-2.18-.208-1.83-1.279l1.92-5.885L.74 10.395c-.688-.492-.334-1.583.516-1.583h6.191l1.92-5.885z" />
+                          </svg>
+                        ))}
+                      </div>
+
+                      {/* Review Title */}
+                      <h2 className="text-lg font-semibold mb-2 text-gray-800">
+                        {review.title}
+                      </h2>
+
+                      {/* Review Text */}
+                      <p className="mb-4 text-gray-700">{review.text}</p>
+
+                      {/* Date of Experience */}
+                      <p className="text-sm text-gray-500">
+                        <strong>Date of experience:</strong>{" "}
+                        {new Date(review.date).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </p>
                     </div>
-
-                    {/* Star Rating */}
-                    <div className="flex items-center mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <svg
-                          key={i}
-                          className={`w-5 h-5 ${
-                            i < review.rating
-                              ? "text-emerald-400"
-                              : "text-gray-300"
-                          }`}
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M9.049 2.927a.997.997 0 011.902 0l1.92 5.885h6.191c.85 0 1.204 1.091.516 1.583l-5.003 3.637 1.92 5.885c.35 1.071-.916 1.963-1.83 1.279l-5.003-3.637-5.003 3.637c-.914.684-2.18-.208-1.83-1.279l1.92-5.885L.74 10.395c-.688-.492-.334-1.583.516-1.583h6.191l1.92-5.885z" />
-                        </svg>
-                      ))}
-                    </div>
-
-                    {/* Review Title */}
-                    <h2 className="text-lg font-semibold mb-2 text-gray-800">
-                      {review.title}
-                    </h2>
-
-                    {/* Review Text */}
-                    <p className="mb-4 text-gray-700">{review.text}</p>
-
-                    {/* Date of Experience */}
-                    <p className="text-sm text-gray-500">
-                      <strong>Date of experience:</strong>{" "}
-                      {new Date(review.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </p>
                   </div>
                 ))
               ) : (
                 <p>No reviews available.</p>
               )}
-            </div>
+            </Slider>
           )}
         </div>
       </main>
