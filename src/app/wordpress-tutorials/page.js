@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ClipLoader } from "react-spinners"; // Import a spinner library
 
 export default function WordPressTutorials() {
   const [posts, setPosts] = useState([]);
@@ -60,8 +59,8 @@ export default function WordPressTutorials() {
 
       {/* Loading Indicator */}
       {loading ? (
-        <div className="flex justify-center items-center h-64">
-          <ClipLoader color="#4A90E2" size={50} />
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-emerald-500"></div>
         </div>
       ) : (
         <div className="space-y-10">
@@ -97,7 +96,11 @@ export default function WordPressTutorials() {
                   </p>
                   <h2 className="text-2xl font-semibold mb-3">
                     <Link href={`/wordpress-tutorials/${post.slug}`}>
-                      {post.title.rendered}
+                      <h2
+                        dangerouslySetInnerHTML={{
+                          __html: post.title.rendered,
+                        }}
+                      ></h2>
                     </Link>
                   </h2>
                   <p
