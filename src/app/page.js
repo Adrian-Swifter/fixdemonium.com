@@ -161,11 +161,10 @@ export default function Home() {
             </div>
             <div>
               <Image
-                src="/images/test.png" // Replace with actual image
+                src="/images/hero.png"
                 alt="WordPress Support"
                 width={1200}
                 height={800}
-                className="rounded-lg shadow-2xl"
               />
             </div>
           </div>

@@ -13,7 +13,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center">
           <Image
-            src="/images/wpsupportlylogo.png" // Replace with the actual path to your logo
+            src="/images/fixdemonium-logo.png" // Replace with the actual path to your logo
             alt="Logo"
             width={100}
             height={100}

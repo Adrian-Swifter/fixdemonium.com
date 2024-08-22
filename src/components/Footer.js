@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Logo and About */}
         <div>
           <Image
-            src="/images/wpsupportlylogo.png" // Replace with your logo path
+            src="/images/fixdemonium-logo.png"
             alt="FixDemonium Logo"
             width={150}
             height={50}
