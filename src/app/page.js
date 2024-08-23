@@ -9,6 +9,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
+import ServicesSection from "@/components/ServicesSection";
 
 const roboto = Lora({
   weight: "400",
@@ -103,8 +104,8 @@ export default function Home() {
                   "text-xl md:text-2xl text-gray-700 mb-10 " + poppins.className
                 }
               >
-                Your WordPress website is in good hands. We fix issues, optimize
-                performance, and keep your site secure.
+                Bringing order to you WordPress chaos. Fixdemonium fix issues,
+                optimize performance, and keep your site secure.
               </p>
               <a
                 href="#"
@@ -408,6 +409,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <ServicesSection />
 
         {/* TrustPilot Reviews */}
         <div className="w-full py-16">
