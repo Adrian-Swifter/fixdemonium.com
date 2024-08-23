@@ -3,53 +3,62 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
-    <header className="bg-white">
+    <header className={`${poppins.className} bg-white`}>
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center">
+        <Link href="/" passHref>
           <Image
-            src="/images/fixdemonium-logo.png" // Replace with the actual path to your logo
-            alt="Logo"
+            src="/images/fixdemonium-logo.png"
+            alt="Fixdemonium Logo"
             width={100}
             height={100}
             className="mr-2"
           />
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
-          <a href="/" className="text-gray-700 hover:text-teal-600">
+          <Link href="/" className="text-gray-700 hover:text-teal-600">
             Home
-          </a>
-          <a href="/about" className="text-gray-700 hover:text-teal-600">
+          </Link>
+          <Link href="/about" className="text-gray-700 hover:text-teal-600">
             About
-          </a>
-          <a href="/services" className="text-gray-700 hover:text-teal-600">
+          </Link>
+          <Link href="/services" className="text-gray-700 hover:text-teal-600">
             Services
-          </a>
-          <a
+          </Link>
+          <Link
             href="/wordpress-tutorials"
             className="text-gray-700 hover:text-teal-600"
           >
             Blog
-          </a>
-          <a
+          </Link>
+          <Link
             href="/demo"
             className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700"
           >
             Try Our Demo
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggleMenu}
             type="button"
             className="text-gray-700 hover:text-teal-600 focus:outline-none focus:text-teal-600"
             aria-label="toggle menu"
@@ -66,7 +75,7 @@ export default function Header() {
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
-              ></path>
+              />
             </svg>
           </button>
         </div>
@@ -76,33 +85,33 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <nav className="px-6 py-4 space-y-2">
-            <a href="/" className="block text-gray-700 hover:text-teal-600">
+            <Link href="/" className="block text-gray-700 hover:text-teal-600">
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="/about"
               className="block text-gray-700 hover:text-teal-600"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="/services"
               className="block text-gray-700 hover:text-teal-600"
             >
               Services
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               className="block text-gray-700 hover:text-teal-600"
             >
               Contact
-            </a>
-            <a
+            </Link>
+            <Link
               href="/demo"
               className="block bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700"
             >
               Try Our Demo
-            </a>
+            </Link>
           </nav>
         </div>
       )}

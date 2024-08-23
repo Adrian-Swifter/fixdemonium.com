@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Lora } from "next/font/google";
+import { Lora, Poppins } from "next/font/google";
 import Head from "next/head";
 import Script from "next/script";
 import Slider from "react-slick";
@@ -14,10 +14,16 @@ const roboto = Lora({
   subsets: ["latin"],
 });
 
+const poppins = Poppins({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export default function Home() {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -71,6 +77,14 @@ export default function Home() {
         },
       },
     ],
+  };
+
+  const handlePlay = () => {
+    const videoElement = document.getElementById("videoElement");
+    if (videoElement) {
+      videoElement.play();
+      setIsPlaying(true);
+    }
   };
 
   return (
@@ -148,15 +162,22 @@ export default function Home() {
               <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
                 24/7 Expert WordPress Support & Maintenance
               </h1>
-              <p className="text-xl md:text-2xl text-gray-700 mb-10">
+              <p
+                className={
+                  "text-xl md:text-2xl text-gray-700 mb-10 " + poppins.className
+                }
+              >
                 Your WordPress website is in good hands. We fix issues, optimize
                 performance, and keep your site secure.
               </p>
               <a
                 href="#"
-                className="inline-block bg-emerald-300 text-white px-8 py-3 text-lg font-bold hover:bg-emerald-500"
+                className={
+                  "inline-block bg-emerald-300 text-white px-8 py-3 text-lg font-bold hover:bg-emerald-500 " +
+                  poppins.className
+                }
               >
-                TRY OUR DEMO VERSION
+                Get a Quote
               </a>
             </div>
             <div>
@@ -347,14 +368,43 @@ export default function Home() {
 
         {/* Video and text Section */}
         <div className="w-full text-white py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="md:flex justify-center">
-            <Image
-              src="/images/test.png"
-              alt="Mission Control"
-              width={400}
-              height={400}
-              className="rounded-lg shadow-lg"
-            />
+          <div className="md:flex justify-center relative">
+            {/* Video Element */}
+            <video
+              id="videoElement"
+              controls
+              preload="none"
+              poster="/images/wordpress-video-poster.png" // Replace with your poster image path
+              className="w-full h-auto rounded-lg shadow-lg"
+            >
+              <source src="/images/wordpress-video.webm" type="video/webm" />
+              <source src="/images/wordpress-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            {/* Play Button Overlay */}
+            {!isPlaying && (
+              <button
+                onClick={handlePlay}
+                className="absolute inset-0 flex items-center justify-center"
+                aria-label="Play Video"
+              >
+                <div className="bg-black bg-opacity-50 rounded-full p-4">
+                  <svg
+                    className="w-16 h-16 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5 3.868v16.264c0 1.09 1.268 1.637 2.07.964l13.342-8.132c.837-.51.837-1.754 0-2.264L7.07 2.904C6.268 2.23 5 2.778 5 3.868z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </button>
+            )}
           </div>
           <div>
             <h2 className="text-3xl font-bold text-emerald-400 mb-8 px-4">
