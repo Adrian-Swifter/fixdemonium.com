@@ -1,32 +1,30 @@
-// app/layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
-import Head from "next/head";
-import Script from "next/script";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata() {
   return {
-    title: "24/7 Expert WordPress Support & Maintenance | WP Supportly",
+    title: "24/7 Expert WordPress Support & Maintenance | Fixdemonium",
     description:
-      "WP Supportly offers expert WordPress support and maintenance services, including troubleshooting, performance optimization, security, and more. Get 24/7 support from our team.",
+      "Fixdemonium offers expert WordPress support and maintenance services, including troubleshooting, performance optimization, security, and more. Get 24/7 support from our team.",
     keywords:
-      "WordPress support, WordPress maintenance, WordPress troubleshooting, WordPress performance optimization, WordPress security, WP Supportly",
+      "WordPress support, WordPress maintenance, WordPress troubleshooting, WordPress performance optimization, WordPress security, Fixdemonium",
     openGraph: {
-      title: "24/7 Expert WordPress Support & Maintenance | WP Supportly",
+      title: "24/7 Expert WordPress Support & Maintenance | Fixdemonium",
       description:
-        "WP Supportly offers expert WordPress support and maintenance services, including troubleshooting, performance optimization, security, and more. Get 24/7 support from our team.",
-      url: "https://www.wpsupportly.com",
-      siteName: "WP Supportly",
+        "Fixdemonium offers expert WordPress support and maintenance services, including troubleshooting, performance optimization, security, and more. Get 24/7 support from our team.",
+      url: "https://www.fixdemonium.com",
+      siteName: "Fixdemonium",
       images: [
         {
           url: "/images/og-image.jpg",
           width: 1200,
           height: 630,
-          alt: "WP Supportly",
+          alt: "Fixdemonium",
         },
       ],
       type: "website",
@@ -34,9 +32,9 @@ export async function generateMetadata() {
     },
     twitter: {
       card: "summary_large_image",
-      title: "24/7 Expert WordPress Support & Maintenance | WP Supportly",
+      title: "24/7 Expert WordPress Support & Maintenance | Fixdemonium",
       description:
-        "WP Supportly offers expert WordPress support and maintenance services, including troubleshooting, performance optimization, security, and more. Get 24/7 support from our team.",
+        "Fixdemonium offers expert WordPress support and maintenance services, including troubleshooting, performance optimization, security, and more. Get 24/7 support from our team.",
       image: "/images/og-image.jpg",
     },
     robots: {
@@ -44,7 +42,7 @@ export async function generateMetadata() {
       follow: true,
     },
     alternates: {
-      canonical: "https://www.wpsupportly.com",
+      canonical: "https://www.fixdemonium.com",
     },
     other: {
       "X-UA-Compatible": "IE=edge",
@@ -56,13 +54,13 @@ export async function generateMetadata() {
     structuredData: {
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: "WP Supportly",
-      url: "https://www.wpsupportly.com",
-      logo: "https://www.wpsupportly.com/images/logo.png",
+      name: "Fixdemonium",
+      url: "https://www.fixdemonium.com",
+      logo: "https://www.fixdemonium.com/images/logo.png",
       sameAs: [
-        "https://www.facebook.com/wpsupportly",
-        "https://www.twitter.com/wpsupportly",
-        "https://www.linkedin.com/company/wpsupportly",
+        "https://www.facebook.com/Fixdemonium",
+        "https://www.twitter.com/Fixdemonium",
+        "https://www.linkedin.com/company/fixdemonium",
       ],
       contactPoint: {
         "@type": "ContactPoint",
@@ -78,20 +76,18 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <Script id="trustpilot-script" strategy="afterInteractive">
-          {`
-          (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
-              a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
-              f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
-              tp('register', 'lpkpiB28EW8UVIQ5');
-        `}
-        </Script>
-      </Head>
       <body className={inter.className}>
         <Header />
         <main>{children}</main>
         <Footer />
+        <Script id="trustpilot-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+                a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
+                f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
+                tp('register', 'lpkpiB28EW8UVIQ5');
+          `}
+        </Script>
       </body>
     </html>
   );
