@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Lora, Poppins } from "next/font/google";
-import Head from "next/head";
-import Script from "next/script";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -152,7 +150,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   24/7 Support & Troubleshooting
                 </h3>
-                <p className="text-gray-600 text-center">
+                <p className={`text-gray-600 text-center ${poppins.className}`}>
                   Get round-the-clock support to resolve any WordPress issues,
                   ensuring your website is always running smoothly.
                 </p>
@@ -178,7 +176,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   WordPress Performance Optimization
                 </h3>
-                <p className="text-gray-600 text-center">
+                <p className={"text-gray-600 text-center " + poppins.className}>
                   Enhance your website’s speed and performance, providing a
                   better user experience and improved SEO rankings.
                 </p>
@@ -207,7 +205,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   Security & Malware Removal
                 </h3>
-                <p className="text-gray-600 text-center">
+                <p className={"text-gray-600 text-center " + poppins.className}>
                   Protect your WordPress site with our security services,
                   including malware removal and vulnerability fixes.
                 </p>
@@ -242,7 +240,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   WordPress Backup & Recovery
                 </h3>
-                <p className="text-gray-600 text-center">
+                <p className={"text-gray-600 text-center " + poppins.className}>
                   Keep your data safe with regular backups and reliable recovery
                   options, ensuring business continuity.
                 </p>
@@ -271,7 +269,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   Divi Theme Support
                 </h3>
-                <p className="text-gray-600 text-center">
+                <p className={"text-gray-600 text-center " + poppins.className}>
                   Expert help with Divi theme customization and troubleshooting,
                   to keep your site running smoothly.
                 </p>
@@ -311,7 +309,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   Custom Development & Integration
                 </h3>
-                <p className="text-gray-600 text-center">
+                <p className={"text-gray-600 text-center " + poppins.className}>
                   Get tailored solutions for your business with our custom
                   WordPress development and integration services.
                 </p>
@@ -369,7 +367,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Submit Your Issue
                 </h3>
-                <p className="text-gray-600">
+                <p className={"text-gray-600 " + poppins.className}>
                   Tell us what’s wrong using contact form or live chat. Provide
                   a brief description of the issue, and we’ll take it from
                   there. After reviewing your submission, we’ll request access
@@ -380,7 +378,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Expert Troubleshooting & Resolution
                 </h3>
-                <p className="text-gray-600">
+                <p className={"text-gray-600 " + poppins.className}>
                   We don’t just patch things up. Our experts dive deep into your
                   site’s code using a secure staging environment, ensuring your
                   live website stays unaffected. Once we’ve diagnosed and
@@ -392,14 +390,14 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Satisfaction Guaranteed
                 </h3>
-                <p className="text-gray-600">
+                <p className={"text-gray-600 " + poppins.className}>
                   We believe in results. That’s why you only pay when the job is
                   done and you’re completely satisfied with our work. No hidden
                   fees, just effective solutions.
                 </p>
               </div>
             </div>
-            <div className="mt-8">
+            <div className={`mt-8 ${poppins.className}`}>
               <a
                 href="#"
                 className="inline-block bg-emerald-400 text-white px-8 py-4 mx-4 text-lg font-bold hover:bg-emerald-500"
@@ -482,10 +480,14 @@ export default function Home() {
                       </h2>
 
                       {/* Review Text */}
-                      <p className="mb-4 text-gray-700">{review.text}</p>
+                      <p className={"mb-4 text-gray-700 " + poppins.className}>
+                        {review.text}
+                      </p>
 
                       {/* Date of Experience */}
-                      <p className="text-sm text-gray-500">
+                      <p
+                        className={"text-sm text-gray-500 " + poppins.className}
+                      >
                         <strong>Date of experience:</strong>{" "}
                         {new Date(review.date).toLocaleDateString("en-US", {
                           year: "numeric",
