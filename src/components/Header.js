@@ -47,8 +47,11 @@ export default function Header() {
           <Link href="/" className="text-gray-700 hover:text-teal-600">
             Home
           </Link>
-          <Link href="/about" className="text-gray-700 hover:text-teal-600">
-            About
+          <Link
+            href="/ongoing-wordpress-support"
+            className="text-gray-700 hover:text-teal-600"
+          >
+            Montly Support
           </Link>
           <div
             className="relative group"
