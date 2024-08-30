@@ -9,14 +9,14 @@ export default function DiviSupportPage() {
         <h1 className="text-5xl font-bold text-gray-900 mb-4">
           Expert Divi Support & Troubleshooting
         </h1>
-        <p className="text-xl text-gray-700">
+        <p className="text-xl text-gray-700 max-w-3xl mx-auto">
           Your one-stop solution for all things Divi. From theme customization
           to performance optimization, our experts are here to help you get the
           most out of Divi.
         </p>
         <div className="mt-6">
           <Link href="/contact">
-            <span className="bg-emerald-500 text-white px-8 py-3 rounded-full hover:bg-emerald-600 font-semibold cursor-pointer">
+            <span className="bg-emerald-500 text-white px-8 py-3 rounded-full hover:bg-emerald-600 font-semibold cursor-pointer transition-colors">
               Get Started
             </span>
           </Link>
@@ -24,14 +24,14 @@ export default function DiviSupportPage() {
       </header>
 
       {/* Services Section */}
-      <section className="py-10 bg-gray-100">
-        <h2 className="text-4xl font-bold text-center mb-8">
+      <section className="py-10 bg-gray-50">
+        <h2 className="text-4xl font-bold text-center mb-10">
           Our Divi Services
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Service 1 */}
-          <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          <div className="p-6 bg-white rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
               Divi Theme Customization
             </h3>
             <p className="text-gray-600">
@@ -40,8 +40,8 @@ export default function DiviSupportPage() {
             </p>
           </div>
           {/* Service 2 */}
-          <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          <div className="p-6 bg-white rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
               Speed & Performance Optimization
             </h3>
             <p className="text-gray-600">
@@ -50,8 +50,8 @@ export default function DiviSupportPage() {
             </p>
           </div>
           {/* Service 3 */}
-          <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          <div className="p-6 bg-white rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
               Troubleshooting & Bug Fixes
             </h3>
             <p className="text-gray-600">
@@ -60,8 +60,8 @@ export default function DiviSupportPage() {
             </p>
           </div>
           {/* Service 4 */}
-          <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          <div className="p-6 bg-white rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
               Divi Builder Assistance
             </h3>
             <p className="text-gray-600">
@@ -70,8 +70,8 @@ export default function DiviSupportPage() {
             </p>
           </div>
           {/* Service 5 */}
-          <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          <div className="p-6 bg-white rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
               Plugin Integration
             </h3>
             <p className="text-gray-600">
@@ -80,8 +80,8 @@ export default function DiviSupportPage() {
             </p>
           </div>
           {/* Service 6 */}
-          <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          <div className="p-6 bg-white rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
               Ongoing Maintenance & Support
             </h3>
             <p className="text-gray-600">
@@ -93,11 +93,11 @@ export default function DiviSupportPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-10">
-        <h2 className="text-4xl font-bold text-center mb-8">How We Work</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+      <section className="py-16">
+        <h2 className="text-4xl font-bold text-center mb-10">How We Work</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="text-center p-8 bg-white rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
               1. Consultation
             </h3>
             <p className="text-gray-600">
@@ -105,8 +105,8 @@ export default function DiviSupportPage() {
               and goals.
             </p>
           </div>
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          <div className="text-center p-8 bg-white rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
               2. Implementation
             </h3>
             <p className="text-gray-600">
@@ -114,8 +114,8 @@ export default function DiviSupportPage() {
               perfection.
             </p>
           </div>
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          <div className="text-center p-8 bg-white rounded-lg border border-gray-200 transition-transform transform hover:-translate-y-1">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
               3. Review & Support
             </h3>
             <p className="text-gray-600">
@@ -127,47 +127,47 @@ export default function DiviSupportPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-10 bg-gray-100">
-        <h2 className="text-4xl font-bold text-center mb-8">
+      <section className="py-16 bg-gray-50">
+        <h2 className="text-4xl font-bold text-center mb-10">
           What Our Clients Say
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Testimonial 1 */}
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <p className="text-gray-600 italic">
+          <div className="p-8 bg-white rounded-lg border border-gray-200">
+            <p className="text-gray-600 italic mb-4">
               "FixDemonium took our Divi site to the next level! Their expertise
               and support were invaluable."
             </p>
-            <p className="text-gray-800 font-semibold mt-4">- John Doe</p>
+            <p className="text-gray-800 font-semibold">- John Doe</p>
           </div>
           {/* Testimonial 2 */}
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <p className="text-gray-600 italic">
+          <div className="p-8 bg-white rounded-lg border border-gray-200">
+            <p className="text-gray-600 italic mb-4">
               "Our website was running slow, but thanks to FixDemonium, it now
               loads lightning fast!"
             </p>
-            <p className="text-gray-800 font-semibold mt-4">- Jane Smith</p>
+            <p className="text-gray-800 font-semibold">- Jane Smith</p>
           </div>
           {/* Testimonial 3 */}
-          <div className="p-6 bg-white rounded-lg shadow-md">
-            <p className="text-gray-600 italic">
+          <div className="p-8 bg-white rounded-lg border border-gray-200">
+            <p className="text-gray-600 italic mb-4">
               "Their Divi support services are top-notch. They resolved all our
               issues quickly and professionally."
             </p>
-            <p className="text-gray-800 font-semibold mt-4">- Michael Brown</p>
+            <p className="text-gray-800 font-semibold">- Michael Brown</p>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-10">
-        <h2 className="text-4xl font-bold text-center mb-8">
+      <section className="py-16">
+        <h2 className="text-4xl font-bold text-center mb-10">
           Frequently Asked Questions
         </h2>
-        <div className="space-y-8">
+        <div className="space-y-8 max-w-3xl mx-auto">
           {/* FAQ 1 */}
           <div>
-            <h3 className="text-xl font-semibold text-gray-800">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
               What is Divi, and why should I use it?
             </h3>
             <p className="text-gray-600">
@@ -178,7 +178,7 @@ export default function DiviSupportPage() {
           </div>
           {/* FAQ 2 */}
           <div>
-            <h3 className="text-xl font-semibold text-gray-800">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
               How long does it take to customize my Divi theme?
             </h3>
             <p className="text-gray-600">
@@ -188,7 +188,7 @@ export default function DiviSupportPage() {
           </div>
           {/* FAQ 3 */}
           <div>
-            <h3 className="text-xl font-semibold text-gray-800">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Can you help with Divi Builder issues?
             </h3>
             <p className="text-gray-600">
@@ -200,14 +200,14 @@ export default function DiviSupportPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-10 bg-emerald-500 text-white text-center">
+      <section className="py-16 bg-emerald-500 text-white text-center">
         <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
-        <p className="text-xl mb-6">
+        <p className="text-xl mb-6 max-w-2xl mx-auto">
           Contact us today to get expert Divi support and make your website
           stand out.
         </p>
         <Link href="/contact">
-          <span className="bg-white text-emerald-500 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 cursor-pointer">
+          <span className="bg-white text-emerald-500 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 cursor-pointer transition-colors">
             Contact Us Now
           </span>
         </Link>

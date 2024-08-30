@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { Lora, Poppins } from "next/font/google";
 import Slider from "react-slick";
@@ -87,6 +87,14 @@ export default function Home() {
     }
   };
 
+  const trustpilotRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <main className={`${roboto.className} container mx-auto px-4 md:px-0`}>
@@ -102,18 +110,29 @@ export default function Home() {
                   "text-xl md:text-2xl text-gray-700 mb-10 " + poppins.className
                 }
               >
-                Bringing order to you WordPress chaos. Fixdemonium fix issues,
-                optimize performance, and keep your site secure.
+                Bringing order to your WordPress chaos. Fixdemonium fixes
+                issues, optimizes performance, and keeps your site secure.
               </p>
-              <a
-                href="#"
-                className={
-                  "inline-block bg-emerald-300 text-white px-8 py-3 text-lg font-bold hover:bg-emerald-500 " +
-                  poppins.className
-                }
-              >
-                Get a Quote
-              </a>
+              <div className="inline-flex space-x-4">
+                <Link
+                  href="/get-a-quote"
+                  className={
+                    "inline-block bg-emerald-400 text-white px-8 py-3 text-lg font-bold hover:bg-emerald-500 " +
+                    poppins.className
+                  }
+                >
+                  Get a Quote
+                </Link>
+                <button
+                  onClick={() => scrollToSection(trustpilotRef)}
+                  className={
+                    "inline-block bg-gray-200 text-gray-700 px-8 py-3 text-lg font-bold hover:bg-gray-300 " +
+                    poppins.className
+                  }
+                >
+                  Read Reviews
+                </button>
+              </div>
             </div>
             <div>
               <Image
@@ -399,10 +418,10 @@ export default function Home() {
             </div>
             <div className={`mt-8 ${poppins.className}`}>
               <a
-                href="#"
+                href="get-a-quote"
                 className="inline-block bg-emerald-400 text-white px-8 py-4 mx-4 text-lg font-bold hover:bg-emerald-500"
               >
-                ORDER ONE-TIME FIX
+                Get a Quote
               </a>
             </div>
           </div>
@@ -411,7 +430,7 @@ export default function Home() {
         <ServicesSection />
 
         {/* TrustPilot Reviews */}
-        <div className="w-full py-16">
+        <div className="w-full py-16" ref={trustpilotRef}>
           <h1 className="text-4xl font-bold mb-8 text-center">
             TrustPilot Reviews
           </h1>
@@ -480,13 +499,13 @@ export default function Home() {
                       </h2>
 
                       {/* Review Text */}
-                      <p className={"mb-4 text-gray-700 " + poppins.className}>
+                      <p className={`mb-4 text-gray-700 ${poppins.className}`}>
                         {review.text}
                       </p>
 
                       {/* Date of Experience */}
                       <p
-                        className={"text-sm text-gray-500 " + poppins.className}
+                        className={`text-sm text-gray-500 ${poppins.className}`}
                       >
                         <strong>Date of experience:</strong>{" "}
                         {new Date(review.date).toLocaleDateString("en-US", {
