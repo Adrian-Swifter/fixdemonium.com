@@ -115,7 +115,7 @@ export default function Home() {
               </p>
               <div className="inline-flex space-x-4">
                 <Link
-                  href="/get-a-quote"
+                  href="/contact-us"
                   className={
                     "inline-block bg-emerald-400 text-white px-8 py-3 text-lg font-bold hover:bg-emerald-500 " +
                     poppins.className
@@ -418,7 +418,7 @@ export default function Home() {
             </div>
             <div className={`mt-8 ${poppins.className}`}>
               <a
-                href="get-a-quote"
+                href="contact-us"
                 className="inline-block bg-emerald-400 text-white px-8 py-4 mx-4 text-lg font-bold hover:bg-emerald-500"
               >
                 Get a Quote

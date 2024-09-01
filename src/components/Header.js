@@ -48,7 +48,7 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/ongoing-wordpress-support"
+            href="/services/ongoing-wordpress-support"
             className="text-gray-700 hover:text-teal-600"
           >
             Montly Support
@@ -222,7 +222,7 @@ export default function Header() {
             Blog
           </Link>
           <Link
-            href="/one-time-wordpress-fix"
+            href="/services/one-time-wordpress-fix"
             className="bg-emerald-400 text-white px-4 py-2 hover:bg-emerald-500"
           >
             One Time Fix

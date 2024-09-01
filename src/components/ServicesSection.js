@@ -12,7 +12,13 @@ export default function ServicesSection() {
   const [hoveredStepOneTime, setHoveredStepOneTime] = useState(1);
   const [hoveredStepOngoing, setHoveredStepOngoing] = useState(1);
 
-  const StepColumn = ({ title, steps, hoveredStep, setHoveredStep }) => {
+  const StepColumn = ({
+    title,
+    steps,
+    hoveredStep,
+    setHoveredStep,
+    linkHref,
+  }) => {
     return (
       <div className="relative">
         <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
@@ -50,7 +56,7 @@ export default function ServicesSection() {
         </div>
         <div className={"text-center mt-10 " + poppins.className}>
           <a
-            href="#"
+            href={linkHref}
             className="inline-block bg-emerald-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-emerald-600"
           >
             Get Started
@@ -123,12 +129,14 @@ export default function ServicesSection() {
             steps={oneTimeFixSteps}
             hoveredStep={hoveredStepOneTime}
             setHoveredStep={setHoveredStepOneTime}
+            linkHref={"/services/one-time-wordpress-fix"}
           />
           <StepColumn
             title="Ongoing Support"
             steps={ongoingSupportSteps}
             hoveredStep={hoveredStepOngoing}
             setHoveredStep={setHoveredStepOngoing}
+            linkHref={"/services/ongoing-wordpress-support"}
           />
         </div>
       </div>
