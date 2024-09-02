@@ -51,7 +51,7 @@ export default function OngoingSupportPage() {
       </section>
 
       {/* What We Offer Section */}
-      <section className="py-16 bg-gradient-to-r from-gray-100 to-gray-50">
+      <section className="p-10">
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
           Our Ongoing Support Services
         </h2>
@@ -174,7 +174,7 @@ export default function OngoingSupportPage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-16">
+      <section className="p-10 bg-white">
         <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
           How Our Ongoing Support Works
         </h2>
@@ -232,7 +232,7 @@ export default function OngoingSupportPage() {
       </section>
 
       {/* Additional Content Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="p-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="lg:pr-10">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -263,7 +263,7 @@ export default function OngoingSupportPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-emerald-500 text-white text-center">
+      <section className="py-16 bg-emerald-400 text-white text-center">
         <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
         <p className="text-xl mb-6">
           Contact us today to secure your ongoing WordPress support plan.

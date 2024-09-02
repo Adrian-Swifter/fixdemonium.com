@@ -14,8 +14,8 @@ export default function OneTimeFixPage() {
           site back on track with our fast and reliable service.
         </p>
         <div className="mt-6">
-          <Link href="/contact">
-            <span className="bg-emerald-500 text-white px-8 py-3 rounded-full hover:bg-emerald-600 font-semibold cursor-pointer">
+          <Link href="/contact-us">
+            <span className="bg-emerald-400 text-white px-8 py-3 hover:bg-emerald-500 font-semibold cursor-pointer">
               Get Started Now
             </span>
           </Link>
@@ -26,11 +26,11 @@ export default function OneTimeFixPage() {
       <section className="py-16 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <Image
-            src="/images/one-time-fix-intro.png"
+            src="/images/mechanic.png"
             alt="One-Time WordPress Fix"
             width={600}
             height={400}
-            className="rounded-lg shadow-lg"
+            className="rounded-lg"
           />
         </div>
         <div className="lg:w-1/2 lg:pl-10">
@@ -51,16 +51,73 @@ export default function OneTimeFixPage() {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="p-10 bg-white">
+        <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
+          How It Works
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="text-center px-6">
+            <Image
+              src="/images/presentation.gif"
+              alt="Consultation"
+              width={64}
+              height={64}
+              className="mb-6 mx-auto"
+            />
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              1. Describe Your Issue
+            </h3>
+            <p className="text-gray-700">
+              Start by telling us what’s wrong. Our team will review the issue
+              and provide an estimated timeline and cost.
+            </p>
+          </div>
+          <div className="text-center px-6">
+            <Image
+              src="/images/maintenance.gif"
+              alt="Fix"
+              width={64}
+              height={64}
+              className="mb-6 mx-auto"
+            />
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              2. We Fix It
+            </h3>
+            <p className="text-gray-700">
+              Our experts will fix the issue, testing everything in a secure
+              staging environment before applying it to your live site.
+            </p>
+          </div>
+          <div className="text-center px-6">
+            <Image
+              src="/images/credit-card.gif"
+              alt="Confirm Fix"
+              width={64}
+              height={64}
+              className="mb-6 mx-auto"
+            />
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              3. Confirm & Pay
+            </h3>
+            <p className="text-gray-700">
+              After confirming the fix, you only pay once you are completely
+              satisfied. No hidden fees—just results.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* What We Offer Section */}
-      <section className="py-16 bg-gradient-to-r from-gray-100 to-gray-50">
+      <section className="p-10">
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
-          Our Services
+          Some Of Our Services
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Service 1 */}
           <div className="flex items-start space-x-6">
             <Image
-              src="/images/troubleshooting.png"
+              src="/images/bug.png"
               alt="Troubleshooting"
               width={64}
               height={64}
@@ -79,7 +136,7 @@ export default function OneTimeFixPage() {
           {/* Service 2 */}
           <div className="flex items-start space-x-6">
             <Image
-              src="/images/security.png"
+              src="/images/cyber-security.png"
               alt="Security Enhancement"
               width={64}
               height={64}
@@ -99,7 +156,7 @@ export default function OneTimeFixPage() {
           {/* Service 3 */}
           <div className="flex items-start space-x-6">
             <Image
-              src="/images/performance.png"
+              src="/images/performance-optimization.png"
               alt="Performance Optimization"
               width={64}
               height={64}
@@ -119,65 +176,8 @@ export default function OneTimeFixPage() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-16">
-        <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
-          How It Works
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="text-center px-6">
-            <Image
-              src="/images/consultation.png"
-              alt="Consultation"
-              width={64}
-              height={64}
-              className="mb-6 mx-auto"
-            />
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              1. Describe Your Issue
-            </h3>
-            <p className="text-gray-700">
-              Start by telling us what’s wrong. Our team will review the issue
-              and provide an estimated timeline and cost.
-            </p>
-          </div>
-          <div className="text-center px-6">
-            <Image
-              src="/images/fix.png"
-              alt="Fix"
-              width={64}
-              height={64}
-              className="mb-6 mx-auto"
-            />
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              2. We Fix It
-            </h3>
-            <p className="text-gray-700">
-              Our experts will fix the issue, testing everything in a secure
-              staging environment before applying it to your live site.
-            </p>
-          </div>
-          <div className="text-center px-6">
-            <Image
-              src="/images/confirm.png"
-              alt="Confirm Fix"
-              width={64}
-              height={64}
-              className="mb-6 mx-auto"
-            />
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              3. Confirm & Pay
-            </h3>
-            <p className="text-gray-700">
-              After confirming the fix, you only pay once you are completely
-              satisfied. No hidden fees—just results.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Additional Content Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="p-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="lg:pr-10">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -196,11 +196,11 @@ export default function OneTimeFixPage() {
           </div>
           <div>
             <Image
-              src="/images/fix-it-all.png"
+              src="/images/wizard.png"
               alt="We Fix It All"
               width={600}
               height={400}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg"
             />
           </div>
         </div>
