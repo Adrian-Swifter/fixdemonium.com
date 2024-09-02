@@ -14,8 +14,8 @@ export default function OngoingSupportPage() {
           maintenance services. From updates to security, we’ve got you covered.
         </p>
         <div className="mt-6">
-          <Link href="/contact">
-            <span className="bg-emerald-500 text-white px-8 py-3 rounded-full hover:bg-emerald-600 font-semibold cursor-pointer">
+          <Link href="/contact-us">
+            <span className="bg-emerald-400 text-white px-8 py-3 hover:bg-emerald-500 font-semibold cursor-pointer">
               Get Started Now
             </span>
           </Link>
@@ -26,11 +26,11 @@ export default function OngoingSupportPage() {
       <section className="py-16 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <Image
-            src="/images/ongoing-support-intro.png"
+            src="/images/wordpress.png"
             alt="Ongoing WordPress Support"
             width={600}
             height={400}
-            className="rounded-lg shadow-lg"
+            className="rounded-lg"
           />
         </div>
         <div className="lg:w-1/2 lg:pl-10">
@@ -59,7 +59,7 @@ export default function OngoingSupportPage() {
           {/* Service 1 */}
           <div className="flex items-start space-x-6">
             <Image
-              src="/images/updates.png"
+              src="/images/updated.png"
               alt="Regular Updates"
               width={64}
               height={64}
@@ -97,7 +97,7 @@ export default function OngoingSupportPage() {
           {/* Service 3 */}
           <div className="flex items-start space-x-6">
             <Image
-              src="/images/security-check.png"
+              src="/images/cyber-security.png"
               alt="Security Monitoring"
               width={64}
               height={64}
@@ -154,7 +154,7 @@ export default function OngoingSupportPage() {
           {/* Service 6 */}
           <div className="flex items-start space-x-6">
             <Image
-              src="/images/maintenance.png"
+              src="/images/wrench.png"
               alt="Ongoing Maintenance"
               width={64}
               height={64}
@@ -181,7 +181,7 @@ export default function OngoingSupportPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="text-center px-6">
             <Image
-              src="/images/onboarding.png"
+              src="/images/onboarding.gif"
               alt="Onboarding"
               width={64}
               height={64}
@@ -198,7 +198,7 @@ export default function OngoingSupportPage() {
           </div>
           <div className="text-center px-6">
             <Image
-              src="/images/maintenance-check.png"
+              src="/images/maintenance.gif"
               alt="Ongoing Maintenance"
               width={64}
               height={64}
@@ -214,7 +214,7 @@ export default function OngoingSupportPage() {
           </div>
           <div className="text-center px-6">
             <Image
-              src="/images/optimization.png"
+              src="/images/page-optimization.gif"
               alt="Continuous Optimization"
               width={64}
               height={64}
@@ -252,11 +252,11 @@ export default function OngoingSupportPage() {
           </div>
           <div>
             <Image
-              src="/images/tailored-support.png"
+              src="/images/ab-test.png"
               alt="Tailored Support"
               width={600}
               height={400}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg"
             />
           </div>
         </div>
@@ -268,7 +268,7 @@ export default function OngoingSupportPage() {
         <p className="text-xl mb-6">
           Contact us today to secure your ongoing WordPress support plan.
         </p>
-        <Link href="/contact">
+        <Link href="/contact-us">
           <span className="bg-white text-emerald-500 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 cursor-pointer">
             Get in Touch
           </span>

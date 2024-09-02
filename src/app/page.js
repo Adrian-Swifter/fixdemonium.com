@@ -2,19 +2,14 @@
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import { Lora, Poppins } from "next/font/google";
+import { Lora } from "next/font/google";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
 import ServicesSection from "@/components/ServicesSection";
 
-const roboto = Lora({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const poppins = Poppins({
+const lora = Lora({
   weight: "400",
   subsets: ["latin"],
 });
@@ -97,7 +92,7 @@ export default function Home() {
 
   return (
     <>
-      <main className={`${roboto.className} container mx-auto px-4 md:px-0`}>
+      <main className={`container mx-auto px-4 md:px-0`}>
         {/* Hero Section */}
         <div className="w-full py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
@@ -105,11 +100,7 @@ export default function Home() {
               <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
                 24/7 Expert WordPress Support & Maintenance
               </h1>
-              <p
-                className={
-                  "text-xl md:text-2xl text-gray-700 mb-10 " + poppins.className
-                }
-              >
+              <p className={"text-xl md:text-2xl text-gray-700 mb-10 "}>
                 Bringing order to your WordPress chaos. Fixdemonium fixes
                 issues, optimizes performance, and keeps your site secure.
               </p>
@@ -117,8 +108,7 @@ export default function Home() {
                 <Link
                   href="/contact-us"
                   className={
-                    "inline-block bg-emerald-400 text-white px-8 py-3 text-lg font-bold hover:bg-emerald-500 " +
-                    poppins.className
+                    "inline-block bg-emerald-400 text-white px-8 py-3 text-lg font-bold hover:bg-emerald-500 "
                   }
                 >
                   Get a Quote
@@ -126,8 +116,7 @@ export default function Home() {
                 <button
                   onClick={() => scrollToSection(trustpilotRef)}
                   className={
-                    "inline-block bg-gray-200 text-gray-700 px-8 py-3 text-lg font-bold hover:bg-gray-300 " +
-                    poppins.className
+                    "inline-block bg-gray-200 text-gray-700 px-8 py-3 text-lg font-bold hover:bg-gray-300 "
                   }
                 >
                   Read Reviews
@@ -169,7 +158,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   24/7 Support & Troubleshooting
                 </h3>
-                <p className={`text-gray-600 text-center ${poppins.className}`}>
+                <p className={`text-gray-600 text-center `}>
                   Get round-the-clock support to resolve any WordPress issues,
                   ensuring your website is always running smoothly.
                 </p>
@@ -195,7 +184,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   WordPress Performance Optimization
                 </h3>
-                <p className={"text-gray-600 text-center " + poppins.className}>
+                <p className={"text-gray-600 text-center "}>
                   Enhance your website’s speed and performance, providing a
                   better user experience and improved SEO rankings.
                 </p>
@@ -224,7 +213,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   Security & Malware Removal
                 </h3>
-                <p className={"text-gray-600 text-center " + poppins.className}>
+                <p className={"text-gray-600 text-center "}>
                   Protect your WordPress site with our security services,
                   including malware removal and vulnerability fixes.
                 </p>
@@ -259,7 +248,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   WordPress Backup & Recovery
                 </h3>
-                <p className={"text-gray-600 text-center " + poppins.className}>
+                <p className={"text-gray-600 text-center "}>
                   Keep your data safe with regular backups and reliable recovery
                   options, ensuring business continuity.
                 </p>
@@ -288,7 +277,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   Divi Theme Support
                 </h3>
-                <p className={"text-gray-600 text-center " + poppins.className}>
+                <p className={"text-gray-600 text-center "}>
                   Expert help with Divi theme customization and troubleshooting,
                   to keep your site running smoothly.
                 </p>
@@ -328,7 +317,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-center text-gray-800 mb-2">
                   Custom Development & Integration
                 </h3>
-                <p className={"text-gray-600 text-center " + poppins.className}>
+                <p className={"text-gray-600 text-center "}>
                   Get tailored solutions for your business with our custom
                   WordPress development and integration services.
                 </p>
@@ -386,7 +375,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Submit Your Issue
                 </h3>
-                <p className={"text-gray-600 " + poppins.className}>
+                <p className={"text-gray-600 "}>
                   Tell us what’s wrong using contact form or live chat. Provide
                   a brief description of the issue, and we’ll take it from
                   there. After reviewing your submission, we’ll request access
@@ -397,7 +386,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Expert Troubleshooting & Resolution
                 </h3>
-                <p className={"text-gray-600 " + poppins.className}>
+                <p className={"text-gray-600 "}>
                   We don’t just patch things up. Our experts dive deep into your
                   site’s code using a secure staging environment, ensuring your
                   live website stays unaffected. Once we’ve diagnosed and
@@ -409,14 +398,14 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   Satisfaction Guaranteed
                 </h3>
-                <p className={"text-gray-600 " + poppins.className}>
+                <p className={"text-gray-600 "}>
                   We believe in results. That’s why you only pay when the job is
                   done and you’re completely satisfied with our work. No hidden
                   fees, just effective solutions.
                 </p>
               </div>
             </div>
-            <div className={`mt-8 ${poppins.className}`}>
+            <div className={`mt-8 `}>
               <a
                 href="contact-us"
                 className="inline-block bg-emerald-400 text-white px-8 py-4 mx-4 text-lg font-bold hover:bg-emerald-500"
@@ -499,14 +488,10 @@ export default function Home() {
                       </h2>
 
                       {/* Review Text */}
-                      <p className={`mb-4 text-gray-700 ${poppins.className}`}>
-                        {review.text}
-                      </p>
+                      <p className={`mb-4 text-gray-700`}>{review.text}</p>
 
                       {/* Date of Experience */}
-                      <p
-                        className={`text-sm text-gray-500 ${poppins.className}`}
-                      >
+                      <p className={`text-sm text-gray-500 `}>
                         <strong>Date of experience:</strong>{" "}
                         {new Date(review.date).toLocaleDateString("en-US", {
                           year: "numeric",
