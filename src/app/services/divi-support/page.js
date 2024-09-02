@@ -1,5 +1,43 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+
+export const metadata = {
+  title: "Expert Divi Support & Troubleshooting | Fixdemonium",
+  description:
+    "Fixdemonium offers expert Divi support and troubleshooting services to ensure your website runs smoothly. Get fast, reliable help with Divi customization, performance optimization, and more.",
+  keywords:
+    "Divi support, Divi help, Divi troubleshooting, Divi theme customization, WordPress support",
+  openGraph: {
+    title: "Expert Divi Support & Troubleshooting | Fixdemonium",
+    description:
+      "Fixdemonium offers expert Divi support and troubleshooting services to ensure your website runs smoothly. Get fast, reliable help with Divi customization, performance optimization, and more.",
+    url: "https://www.fixdemonium.com/divi-support",
+    siteName: "Fixdemonium",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fixdemonium Divi Support",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Expert Divi Support & Troubleshooting | Fixdemonium",
+    description:
+      "Fixdemonium offers expert Divi support and troubleshooting services to ensure your website runs smoothly. Get fast, reliable help with Divi customization, performance optimization, and more.",
+    image: "/images/og-image.jpg",
+  },
+  alternates: {
+    canonical: "https://www.fixdemonium.com/divi-support",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function DiviSupportPage() {
   return (
@@ -17,7 +55,7 @@ export default function DiviSupportPage() {
         <div>
           <Link href="/contact">
             <span className="bg-white text-emerald-500 px-8 py-3 rounded-full font-semibold cursor-pointer transition-transform transform hover:scale-105">
-              Get Started
+              Get Expert Help Now
             </span>
           </Link>
         </div>
@@ -30,7 +68,7 @@ export default function DiviSupportPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Service 1 */}
-          <div className="bg-white rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Divi Theme Customization
             </h3>
@@ -40,7 +78,7 @@ export default function DiviSupportPage() {
             </p>
           </div>
           {/* Service 2 */}
-          <div className="bg-white rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Speed & Performance Optimization
             </h3>
@@ -50,7 +88,7 @@ export default function DiviSupportPage() {
             </p>
           </div>
           {/* Service 3 */}
-          <div className="bg-white rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Troubleshooting & Bug Fixes
             </h3>
@@ -60,7 +98,7 @@ export default function DiviSupportPage() {
             </p>
           </div>
           {/* Service 4 */}
-          <div className="bg-white rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Divi Builder Assistance
             </h3>
@@ -70,7 +108,7 @@ export default function DiviSupportPage() {
             </p>
           </div>
           {/* Service 5 */}
-          <div className="bg-white rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Plugin Integration
             </h3>
@@ -80,7 +118,7 @@ export default function DiviSupportPage() {
             </p>
           </div>
           {/* Service 6 */}
-          <div className="bg-white rounded-lg p-8 shadow-lg transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Ongoing Maintenance & Support
             </h3>
@@ -96,7 +134,7 @@ export default function DiviSupportPage() {
       <section className="py-20 bg-gray-50">
         <h2 className="text-4xl font-bold text-center mb-16">How We Work</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="bg-white rounded-lg p-10 shadow-lg transition-transform transform hover:scale-105 text-center">
+          <div className="bg-white rounded-lg p-10 text-center transition-transform transform hover:scale-105">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               1. Consultation
             </h3>
@@ -105,7 +143,7 @@ export default function DiviSupportPage() {
               and goals.
             </p>
           </div>
-          <div className="bg-white rounded-lg p-10 shadow-lg transition-transform transform hover:scale-105 text-center">
+          <div className="bg-white rounded-lg p-10 text-center transition-transform transform hover:scale-105">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               2. Implementation
             </h3>
@@ -114,7 +152,7 @@ export default function DiviSupportPage() {
               perfection.
             </p>
           </div>
-          <div className="bg-white rounded-lg p-10 shadow-lg transition-transform transform hover:scale-105 text-center">
+          <div className="bg-white rounded-lg p-10 text-center transition-transform transform hover:scale-105">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               3. Review & Support
             </h3>
@@ -133,7 +171,7 @@ export default function DiviSupportPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Testimonial 1 */}
-          <div className="bg-white rounded-lg p-10 shadow-lg transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-10 transition-transform transform hover:scale-105">
             <p className="text-gray-700 italic mb-6">
               "FixDemonium took our Divi site to the next level! Their expertise
               and support were invaluable."
@@ -141,7 +179,7 @@ export default function DiviSupportPage() {
             <p className="text-gray-900 font-semibold">- John Doe</p>
           </div>
           {/* Testimonial 2 */}
-          <div className="bg-white rounded-lg p-10 shadow-lg transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-10 transition-transform transform hover:scale-105">
             <p className="text-gray-700 italic mb-6">
               "Our website was running slow, but thanks to FixDemonium, it now
               loads lightning fast!"
@@ -149,7 +187,7 @@ export default function DiviSupportPage() {
             <p className="text-gray-900 font-semibold">- Jane Smith</p>
           </div>
           {/* Testimonial 3 */}
-          <div className="bg-white rounded-lg p-10 shadow-lg transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-10 transition-transform transform hover:scale-105">
             <p className="text-gray-700 italic mb-6">
               "Their Divi support services are top-notch. They resolved all our
               issues quickly and professionally."
