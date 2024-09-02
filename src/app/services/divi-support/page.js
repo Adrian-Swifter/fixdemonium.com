@@ -160,40 +160,62 @@ export default function DiviSupportPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <h2 className="text-4xl font-bold text-center mb-16">
           Frequently Asked Questions
         </h2>
         <div className="space-y-10 max-w-3xl mx-auto">
           {/* FAQ 1 */}
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              What is Divi, and why should I use it?
+          <div className="border-l-4 border-emerald-500 pl-6">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+              What kind of Divi support does Fixdemonium.com offer?
             </h3>
-            <p className="text-gray-700">
-              Divi is a powerful WordPress theme and visual builder known for
-              its flexibility and ease of use. It’s ideal for creating custom
-              websites without needing to code.
+            <p className="text-gray-700 leading-relaxed">
+              Fixdemonium.com offers expert Divi support to solve any issue that
+              may arise with your Divi theme or downloaded child themes. Our
+              support team specializes in resolving slow loading times,
+              unresponsive Divi Builder, and other problems that may occur with
+              your website.
             </p>
           </div>
           {/* FAQ 2 */}
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              How long does it take to customize my Divi theme?
+          <div className="border-l-4 border-emerald-500 pl-6">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+              How can I contact the Divi support team at Fixdemonium.com?
             </h3>
-            <p className="text-gray-700">
-              The timeframe depends on the complexity of the customization, but
-              most projects are completed within 1-2 weeks.
+            <p className="text-gray-700 leading-relaxed">
+              To contact our Divi support team at Fixdemonium.com, simply visit
+              our website and fill out our contact form with details of your
+              issue. We will respond promptly to provide the necessary
+              assistance to get your website back up and running smoothly.
             </p>
           </div>
           {/* FAQ 3 */}
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Can you help with Divi Builder issues?
+          <div className="border-l-4 border-emerald-500 pl-6">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+              Can Fixdemonium.com help me optimize my Divi website for speed?
             </h3>
-            <p className="text-gray-700">
-              Absolutely! We specialize in troubleshooting Divi Builder problems
-              and ensuring it works smoothly for your needs.
+            <p className="text-gray-700 leading-relaxed">
+              Yes, we can help optimize your Divi website for speed by using
+              caching plugins, optimizing images, minimizing CSS and JavaScript
+              files, and using a content delivery network (CDN) to serve your
+              files from a nearby server. We can also suggest upgrading your
+              hosting plan to a faster server or using a managed WordPress
+              hosting service that is optimized for speed and security.
+            </p>
+          </div>
+          {/* FAQ 4 */}
+          <div className="border-l-4 border-emerald-500 pl-6">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+              How much does Divi support cost at Fixdemonium.com?
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              At Fixdemonium.com, we offer affordable and competitive pricing
+              for our Divi support services starting at $25. We have different
+              packages to suit your specific needs and budget, and we always
+              provide a clear and transparent breakdown of our costs upfront.
+              Contact us today to learn more about our pricing and how we can
+              help you with your Divi website.
             </p>
           </div>
         </div>
