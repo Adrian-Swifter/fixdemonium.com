@@ -53,7 +53,7 @@ export default function DiviSupportPage() {
           most out of Divi.
         </p>
         <div>
-          <Link href="/contact">
+          <Link href="/contact-us">
             <span className="bg-white text-emerald-500 px-8 py-3 rounded-full font-semibold cursor-pointer transition-transform transform hover:scale-105">
               Get Expert Help Now
             </span>
@@ -68,7 +68,14 @@ export default function DiviSupportPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Service 1 */}
-          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 text-center transition-transform transform hover:scale-105">
+            <Image
+              src="/images/wrench.png"
+              alt="Divi Theme Customization"
+              width={64}
+              height={64}
+              className="mx-auto mb-6"
+            />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Divi Theme Customization
             </h3>
@@ -77,8 +84,16 @@ export default function DiviSupportPage() {
               stunning designs and layouts that resonate with your audience.
             </p>
           </div>
+
           {/* Service 2 */}
-          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 text-center transition-transform transform hover:scale-105">
+            <Image
+              src="/images/performance-optimization.png"
+              alt="Speed & Performance Optimization"
+              width={64}
+              height={64}
+              className="mx-auto mb-6"
+            />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Speed & Performance Optimization
             </h3>
@@ -87,8 +102,16 @@ export default function DiviSupportPage() {
               enhance page speed and overall site performance.
             </p>
           </div>
+
           {/* Service 3 */}
-          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 text-center transition-transform transform hover:scale-105">
+            <Image
+              src="/images/bug.png"
+              alt="Troubleshooting & Bug Fixes"
+              width={64}
+              height={64}
+              className="mx-auto mb-6"
+            />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Troubleshooting & Bug Fixes
             </h3>
@@ -97,8 +120,16 @@ export default function DiviSupportPage() {
               all Divi-related problems efficiently.
             </p>
           </div>
+
           {/* Service 4 */}
-          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 text-center transition-transform transform hover:scale-105">
+            <Image
+              src="/images/wall.png"
+              alt="Divi Builder Assistance"
+              width={64}
+              height={64}
+              className="mx-auto mb-6"
+            />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Divi Builder Assistance
             </h3>
@@ -107,8 +138,16 @@ export default function DiviSupportPage() {
               our team ensures you make the most of Divi Builder.
             </p>
           </div>
+
           {/* Service 5 */}
-          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 text-center transition-transform transform hover:scale-105">
+            <Image
+              src="/images/plug-in.png"
+              alt="Plugin Integration"
+              width={64}
+              height={64}
+              className="mx-auto mb-6"
+            />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Plugin Integration
             </h3>
@@ -117,8 +156,16 @@ export default function DiviSupportPage() {
               and better performance.
             </p>
           </div>
+
           {/* Service 6 */}
-          <div className="bg-white rounded-lg p-8 transition-transform transform hover:scale-105">
+          <div className="bg-white rounded-lg p-8 text-center transition-transform transform hover:scale-105">
+            <Image
+              src="/images/monitoring.png"
+              alt="Ongoing Maintenance & Support"
+              width={64}
+              height={64}
+              className="mx-auto mb-6"
+            />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Ongoing Maintenance & Support
             </h3>
@@ -131,74 +178,111 @@ export default function DiviSupportPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <h2 className="text-4xl font-bold text-center mb-16">How We Work</h2>
+      <section className="py-20 bg-white">
+        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
+          How We Work
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="bg-white rounded-lg p-10 text-center transition-transform transform hover:scale-105">
+          {/* Step 1 */}
+          <div className="text-center px-6">
+            <Image
+              src="/images/presentation.gif"
+              alt="Consultation"
+              width={64}
+              height={64}
+              className="mb-6 mx-auto"
+            />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              1. Consultation
+              1. Describe Your Divi Issue
             </h3>
             <p className="text-gray-700">
-              We start with an in-depth consultation to understand your needs
-              and goals.
+              Share the problems you’re facing with your Divi theme. Whether
+              it’s a design, functionality, or performance issue, our experts
+              will review it and provide a clear solution plan.
             </p>
           </div>
-          <div className="bg-white rounded-lg p-10 text-center transition-transform transform hover:scale-105">
+
+          {/* Step 2 */}
+          <div className="text-center px-6">
+            <Image
+              src="/images/technician.gif"
+              alt="We Fix It"
+              width={64}
+              height={64}
+              className="mb-6 mx-auto"
+            />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              2. Implementation
+              2. We Fix Your Divi Theme
             </h3>
             <p className="text-gray-700">
-              Our experts execute the plan, ensuring everything is done to
-              perfection.
+              Our Divi experts will resolve the issue, making necessary
+              adjustments or fixes in a secure environment. We ensure everything
+              works perfectly before applying changes to your live website.
             </p>
           </div>
-          <div className="bg-white rounded-lg p-10 text-center transition-transform transform hover:scale-105">
+
+          {/* Step 3 */}
+          <div className="text-center px-6">
+            <Image
+              src="/images/credit-card.gif"
+              alt="Confirm Fix"
+              width={64}
+              height={64}
+              className="mb-6 mx-auto"
+            />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              3. Review & Support
+              3. Review & Pay
             </h3>
             <p className="text-gray-700">
-              We review the results with you and provide ongoing support as
-              needed.
+              Once you're satisfied with the fix, confirm the results, and pay.
+              We only charge you when you’re happy with the outcome, with no
+              hidden fees.
             </p>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
-        <h2 className="text-4xl font-bold text-center mb-16">
+      <section className="py-16">
+        <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
           What Our Clients Say
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Testimonial 1 */}
-          <div className="bg-white rounded-lg p-10 transition-transform transform hover:scale-105">
-            <p className="text-gray-700 italic mb-6">
-              "FixDemonium took our Divi site to the next level! Their expertise
-              and support were invaluable."
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="text-center bg-white p-6 rounded-lg">
+            <p className="text-gray-700 italic mb-4">
+              "Five stars are not enough! I’d been delayed and put off by tech
+              services. Found Milos thru the Divi site.Awesome! Answer to
+              prayer!"
             </p>
-            <p className="text-gray-900 font-semibold">- John Doe</p>
+            <p className="text-gray-900 font-semibold">- Nancy</p>
           </div>
-          {/* Testimonial 2 */}
-          <div className="bg-white rounded-lg p-10 transition-transform transform hover:scale-105">
-            <p className="text-gray-700 italic mb-6">
-              "Our website was running slow, but thanks to FixDemonium, it now
-              loads lightning fast!"
+          <div className="text-center bg-white p-6 rounded-lg">
+            <p className="text-gray-700 italic mb-4">
+              "We’ve been working with Milos for a couple months in which time
+              he has delivered a great website. He is responsive so changes are
+              made quickly and is very easy to communicate with. His rates are
+              very competitive and he goes the extra mile."
             </p>
-            <p className="text-gray-900 font-semibold">- Jane Smith</p>
+            <p className="text-gray-900 font-semibold">- Kirk W</p>
           </div>
-          {/* Testimonial 3 */}
-          <div className="bg-white rounded-lg p-10 transition-transform transform hover:scale-105">
-            <p className="text-gray-700 italic mb-6">
-              "Their Divi support services are top-notch. They resolved all our
-              issues quickly and professionally."
+          <div className="text-center bg-white p-6 rounded-lg">
+            <p className="text-gray-700 italic mb-4">
+              "We have just started working with Milos but plan to make this an
+              ongoing support for our site. It’s saved our in-house team many
+              man-hours of frustration battling with WordPress. Response times
+              are rapid, excellent technical knowledge goes beyond WordPress and
+              it’s a very cost efficient way of being able to get your site to
+              do what you want and do it (technically) well. Highly recommend
+              Wrdprssifix’s services."
             </p>
-            <p className="text-gray-900 font-semibold">- Michael Brown</p>
+            <p className="text-gray-900 font-semibold">- joanne lacey</p>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20">
         <h2 className="text-4xl font-bold text-center mb-16">
           Frequently Asked Questions
         </h2>
@@ -266,7 +350,7 @@ export default function DiviSupportPage() {
           Contact us today to get expert Divi support and make your website
           stand out.
         </p>
-        <Link href="/contact">
+        <Link href="/contact-us">
           <span className="bg-white text-emerald-500 px-8 py-4 rounded-full font-semibold cursor-pointer transition-transform transform hover:scale-105">
             Contact Us Now
           </span>

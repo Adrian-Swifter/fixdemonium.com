@@ -211,27 +211,36 @@ export default function OneTimeFixPage() {
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">
           What Our Clients Say
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          <div className="text-center bg-white p-6 rounded-lg shadow-md">
+          <div className="text-center bg-white p-6 rounded-lg">
             <p className="text-gray-700 italic mb-4">
-              "FixDemonium quickly resolved our website issues and got us back
-              online fast. Highly recommended!"
+              "Five stars are not enough! I’d been delayed and put off by tech
+              services. Found Milos thru the Divi site.Awesome! Answer to
+              prayer!"
             </p>
-            <p className="text-gray-900 font-semibold">- John Doe</p>
+            <p className="text-gray-900 font-semibold">- Nancy</p>
           </div>
-          <div className="text-center bg-white p-6 rounded-lg shadow-md">
+          <div className="text-center bg-white p-6 rounded-lg">
             <p className="text-gray-700 italic mb-4">
-              "Their one-time fix service was a lifesaver. Our site is now
-              secure and running smoothly."
+              "We’ve been working with Milos for a couple months in which time
+              he has delivered a great website. He is responsive so changes are
+              made quickly and is very easy to communicate with. His rates are
+              very competitive and he goes the extra mile."
             </p>
-            <p className="text-gray-900 font-semibold">- Jane Smith</p>
+            <p className="text-gray-900 font-semibold">- Kirk W</p>
           </div>
-          <div className="text-center bg-white p-6 rounded-lg shadow-md">
+          <div className="text-center bg-white p-6 rounded-lg">
             <p className="text-gray-700 italic mb-4">
-              "The team at FixDemonium is top-notch. They fixed our issues and
-              provided great advice for the future."
+              "We have just started working with Milos but plan to make this an
+              ongoing support for our site. It’s saved our in-house team many
+              man-hours of frustration battling with WordPress. Response times
+              are rapid, excellent technical knowledge goes beyond WordPress and
+              it’s a very cost efficient way of being able to get your site to
+              do what you want and do it (technically) well. Highly recommend
+              Wrdprssifix’s services."
             </p>
-            <p className="text-gray-900 font-semibold">- Michael Brown</p>
+            <p className="text-gray-900 font-semibold">- joanne lacey</p>
           </div>
         </div>
       </section>
@@ -242,7 +251,7 @@ export default function OneTimeFixPage() {
         <p className="text-xl mb-6">
           Contact us today to get your WordPress site fixed by experts.
         </p>
-        <Link href="/contact">
+        <Link href="/contact-us">
           <span className="bg-white text-emerald-500 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 cursor-pointer">
             Get in Touch
           </span>

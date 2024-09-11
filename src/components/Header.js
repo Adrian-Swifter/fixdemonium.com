@@ -225,7 +225,7 @@ export default function Header() {
             href="/services/one-time-wordpress-fix"
             className="bg-emerald-400 text-white px-4 py-2 hover:bg-emerald-500"
           >
-            One Time Fix
+            One-Time Fix
           </Link>
         </div>
 
@@ -259,11 +259,22 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <nav className="px-6 py-4 space-y-2">
-            <Link href="/" className="block text-gray-700 hover:text-teal-600">
+            <Link
+              href="/"
+              onClick={() => {
+                setIsOpen(false);
+                setIsServicesOpen(false);
+              }}
+              className="block text-gray-700 hover:text-teal-600"
+            >
               Home
             </Link>
             <Link
               href="/about"
+              onClick={() => {
+                setIsOpen(false);
+                setIsServicesOpen(false);
+              }}
               className="block text-gray-700 hover:text-teal-600"
             >
               About
@@ -356,16 +367,24 @@ export default function Header() {
               )}
             </div>
             <Link
-              href="/contact"
+              href="/contact-us"
+              onClick={() => {
+                setIsOpen(false);
+                setIsServicesOpen(false);
+              }}
               className="block text-gray-700 hover:text-teal-600"
             >
               Contact
             </Link>
             <Link
-              href="/demo"
-              className="block bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700"
+              href="/services/one-time-wordpress-fix"
+              onClick={() => {
+                setIsOpen(false);
+                setIsServicesOpen(false);
+              }}
+              className="block bg-emerald-400 text-white px-4 py-2 rounded-md hover:bg-emerald-500"
             >
-              Try Our Demo
+              One-Time Fix
             </Link>
           </nav>
         </div>
