@@ -51,7 +51,7 @@ export default function CustomDevelopmentIntegrationPage() {
           unique business needs.
         </p>
         <div>
-          <Link href="/contact">
+          <Link href="/contact-us">
             <span className="bg-white text-emerald-500 px-8 py-3 rounded-full font-semibold cursor-pointer transition-transform transform hover:scale-105">
               Get a Custom Solution
             </span>
@@ -68,10 +68,10 @@ export default function CustomDevelopmentIntegrationPage() {
           {/* Service 1 */}
           <div className="text-center">
             <Image
-              src="/images/plugin-development.png"
+              src="/images/plug-in.png"
               alt="Custom Plugin Development"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -85,10 +85,10 @@ export default function CustomDevelopmentIntegrationPage() {
           {/* Service 2 */}
           <div className="text-center">
             <Image
-              src="/images/api-integration.png"
+              src="/images/api.png"
               alt="API Integration"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -102,10 +102,10 @@ export default function CustomDevelopmentIntegrationPage() {
           {/* Service 3 */}
           <div className="text-center">
             <Image
-              src="/images/ecommerce-integration.png"
+              src="/images/shopping-online.png"
               alt="eCommerce Integration"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -119,10 +119,10 @@ export default function CustomDevelopmentIntegrationPage() {
           {/* Service 4 */}
           <div className="text-center">
             <Image
-              src="/images/custom-theme.png"
+              src="/images/custom.png"
               alt="Custom Theme Development"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -136,10 +136,10 @@ export default function CustomDevelopmentIntegrationPage() {
           {/* Service 5 */}
           <div className="text-center">
             <Image
-              src="/images/crm-integration.png"
+              src="/images/crm.png"
               alt="CRM Integration"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -153,10 +153,10 @@ export default function CustomDevelopmentIntegrationPage() {
           {/* Service 6 */}
           <div className="text-center">
             <Image
-              src="/images/security-upgrade.png"
+              src="/images/cyber-security.png"
               alt="Security Upgrades"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -178,7 +178,7 @@ export default function CustomDevelopmentIntegrationPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="text-center px-6">
             <Image
-              src="/images/consultation.png"
+              src="/images/presentation.gif"
               alt="Consultation"
               width={64}
               height={64}
@@ -194,7 +194,7 @@ export default function CustomDevelopmentIntegrationPage() {
           </div>
           <div className="text-center px-6">
             <Image
-              src="/images/development.png"
+              src="/images/programmer.gif"
               alt="Development"
               width={64}
               height={64}
@@ -210,7 +210,7 @@ export default function CustomDevelopmentIntegrationPage() {
           </div>
           <div className="text-center px-6">
             <Image
-              src="/images/testing.png"
+              src="/images/test.gif"
               alt="Testing & Deployment"
               width={64}
               height={64}
@@ -256,7 +256,7 @@ export default function CustomDevelopmentIntegrationPage() {
           Get in touch with Fixdemonium today to start your custom WordPress
           development and integration project.
         </p>
-        <Link href="/contact">
+        <Link href="/contact-us">
           <span className="bg-white text-emerald-500 px-8 py-4 rounded-full font-semibold cursor-pointer transition-transform transform hover:scale-105">
             Contact Us Now
           </span>

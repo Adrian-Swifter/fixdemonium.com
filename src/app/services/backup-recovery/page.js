@@ -51,7 +51,7 @@ export default function BackupRecoveryPage() {
           issue.
         </p>
         <div>
-          <Link href="/contact">
+          <Link href="/contact-us">
             <span className="bg-white text-emerald-500 px-8 py-3 rounded-full font-semibold cursor-pointer transition-transform transform hover:scale-105">
               Secure My Site Now
             </span>
@@ -68,10 +68,10 @@ export default function BackupRecoveryPage() {
           {/* Service 1 */}
           <div className="text-center">
             <Image
-              src="/images/backup-icon.png"
+              src="/images/backup.png"
               alt="Scheduled Backups"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -85,10 +85,10 @@ export default function BackupRecoveryPage() {
           {/* Service 2 */}
           <div className="text-center">
             <Image
-              src="/images/recovery.png"
+              src="/images/data-recovery.png"
               alt="Recovery Assistance"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -102,10 +102,10 @@ export default function BackupRecoveryPage() {
           {/* Service 3 */}
           <div className="text-center">
             <Image
-              src="/images/cloud-backup.png"
+              src="/images/clouds.png"
               alt="Cloud Storage Integration"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -114,57 +114,6 @@ export default function BackupRecoveryPage() {
             <p className="text-gray-700">
               We integrate with cloud storage providers to securely store your
               backups, ensuring they're always accessible.
-            </p>
-          </div>
-          {/* Service 4 */}
-          <div className="text-center">
-            <Image
-              src="/images/incremental-backup.png"
-              alt="Incremental Backups"
-              width={80}
-              height={80}
-              className="mx-auto mb-6"
-            />
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Incremental Backups
-            </h3>
-            <p className="text-gray-700">
-              Save space and time with incremental backups, capturing only the
-              changes made since your last backup.
-            </p>
-          </div>
-          {/* Service 5 */}
-          <div className="text-center">
-            <Image
-              src="/images/automated-recovery.png"
-              alt="Automated Recovery"
-              width={80}
-              height={80}
-              className="mx-auto mb-6"
-            />
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Automated Recovery
-            </h3>
-            <p className="text-gray-700">
-              Automate your recovery process to ensure rapid restoration in case
-              of a problem with your WordPress site.
-            </p>
-          </div>
-          {/* Service 6 */}
-          <div className="text-center">
-            <Image
-              src="/images/ransomware.png"
-              alt="Ransomware Protection"
-              width={80}
-              height={80}
-              className="mx-auto mb-6"
-            />
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Ransomware Protection
-            </h3>
-            <p className="text-gray-700">
-              Our services include protection from ransomware attacks, ensuring
-              your backups remain safe from encryption.
             </p>
           </div>
         </div>
@@ -178,7 +127,7 @@ export default function BackupRecoveryPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="text-center px-6">
             <Image
-              src="/images/backup-process.png"
+              src="/images/backup.gif"
               alt="Backup Setup"
               width={64}
               height={64}
@@ -194,7 +143,7 @@ export default function BackupRecoveryPage() {
           </div>
           <div className="text-center px-6">
             <Image
-              src="/images/secure-recovery.png"
+              src="/images/file-transfer.gif"
               alt="Secure Recovery"
               width={64}
               height={64}
@@ -210,7 +159,7 @@ export default function BackupRecoveryPage() {
           </div>
           <div className="text-center px-6">
             <Image
-              src="/images/continuous-support.png"
+              src="/images/24-hours-support.gif"
               alt="Continuous Support"
               width={64}
               height={64}
@@ -256,7 +205,7 @@ export default function BackupRecoveryPage() {
           Get in touch with Fixdemonium today to set up your WordPress backup
           and recovery plan.
         </p>
-        <Link href="/contact">
+        <Link href="/contact-us">
           <span className="bg-white text-emerald-500 px-8 py-4 rounded-full font-semibold cursor-pointer transition-transform transform hover:scale-105">
             Contact Us Now
           </span>
