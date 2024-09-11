@@ -113,7 +113,7 @@ export default function BackupRecoveryPage() {
             </h3>
             <p className="text-gray-700">
               We integrate with cloud storage providers to securely store your
-              backups, ensuring they're always accessible.
+              backups, ensuring they&apos;re always accessible.
             </p>
           </div>
         </div>
