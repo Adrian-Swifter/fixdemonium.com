@@ -20,19 +20,31 @@ export default function Footer() {
     {
       title: "About",
       links: [
-        { href: "/about", label: "Our Story" },
-        { href: "/services", label: "Services" },
-        { href: "/blog", label: "Blog" },
-        { href: "/contact", label: "Contact Us" },
+        { href: "/wordpress-tutorials", label: "Blog" },
+        { href: "/contact-us", label: "Contact Us" },
       ],
     },
     {
       title: "Services",
       links: [
-        { href: "/services/wordpress-support", label: "WordPress Support" },
-        { href: "/services/wordpress-maintenance", label: "Maintenance" },
-        { href: "/services/wordpress-security", label: "Security" },
-        { href: "/services/wordpress-optimization", label: "Optimization" },
+        {
+          href: "/services/support-troubleshooting",
+          label: "WordPress Support",
+        },
+        {
+          href: "/services/performance-optimization",
+          label: "Speed Optimization",
+        },
+        {
+          href: "/services/security-malware-removal",
+          label: "Malware Removal",
+        },
+        { href: "/services/divi-support", label: "Divi Support" },
+        { href: "/services/backup-recovery", label: "Backup & Recovery" },
+        {
+          href: "/services/custom-development-integration",
+          label: "Custom Development",
+        },
       ],
     },
     {
@@ -41,8 +53,8 @@ export default function Footer() {
         <>
           <ul className="space-y-2 text-gray-700 text-sm">
             <li>Email: support@fixdemonium.com</li>
-            <li>Phone: +1 234 567 890</li>
-            <li>Address: 123 FixDemonium Street, City, Country</li>
+            <li>Phone: +381600178093</li>
+            <li>Location: Belgrade, Serbia</li>
           </ul>
           <div className="flex space-x-4 mt-4">
             {socialLinks.map((link, index) => (

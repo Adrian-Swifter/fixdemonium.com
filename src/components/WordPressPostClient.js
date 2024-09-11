@@ -99,10 +99,10 @@ export default function WordPressPostClient() {
               Get expert support for your WordPress website today!
             </p>
             <a
-              href="/services"
-              className="block bg-emerald-400 text-white text-center py-2 rounded-md font-semibold"
+              href="/contact-us"
+              className="block bg-emerald-400 text-white text-center py-2 font-semibold"
             >
-              See Our Services
+              Get a Quote
             </a>
           </div>
 
@@ -113,7 +113,7 @@ export default function WordPressPostClient() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="/service/wordpress-support"
+                  href="/services/support-troubleshooting"
                   className="text-emerald-400"
                 >
                   24/7 WordPress Support
@@ -121,7 +121,7 @@ export default function WordPressPostClient() {
               </li>
               <li>
                 <a
-                  href="/service/wordpress-security"
+                  href="/services/security-malware-removal"
                   className="text-emerald-400"
                 >
                   WordPress Security
@@ -129,10 +129,10 @@ export default function WordPressPostClient() {
               </li>
               <li>
                 <a
-                  href="/service/wordpress-maintenance"
+                  href="/services/performance-optimization"
                   className="text-emerald-400"
                 >
-                  WordPress Maintenance
+                  Speed Optimization
                 </a>
               </li>
             </ul>
