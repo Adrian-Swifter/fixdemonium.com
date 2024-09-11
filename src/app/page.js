@@ -441,10 +441,12 @@ export default function Home() {
                       {/* User Info */}
                       <div className="flex items-center mb-4">
                         {review.avatar ? (
-                          <img
+                          <Image
                             src={review.avatar}
                             alt={review.name}
-                            className="w-12 h-12 rounded-full mr-4"
+                            width={48}
+                            height={48}
+                            className="rounded-full mr-4"
                           />
                         ) : (
                           <div className="w-12 h-12 rounded-full bg-teal-600 text-white flex items-center justify-center mr-4">

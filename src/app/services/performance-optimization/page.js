@@ -128,7 +128,7 @@ export default function PerformanceOptimizationPage() {
               Content Delivery Network (CDN)
             </h3>
             <p className="text-gray-700">
-              Implement a CDN to serve your website's assets from servers
+              Implement a CDN to serve your website&apos;s assets from servers
               closest to your users, speeding up global load times.
             </p>
           </div>
@@ -162,8 +162,8 @@ export default function PerformanceOptimizationPage() {
               GZIP Compression
             </h3>
             <p className="text-gray-700">
-              Compress your website's files with GZIP to reduce bandwidth usage
-              and improve page speed.
+              Compress your website&apos;s files with GZIP to reduce bandwidth
+              usage and improve page speed.
             </p>
           </div>
         </div>

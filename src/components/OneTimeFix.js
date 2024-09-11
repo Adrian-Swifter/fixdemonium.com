@@ -144,24 +144,24 @@ export default function OneTimeFixPage() {
           {/* Testimonial 1 */}
           <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <p className="text-gray-600 italic">
-              "FixDemonium quickly resolved our website issues and got us back
-              online fast. Highly recommended!"
+              &quot;FixDemonium quickly resolved our website issues and got us
+              back online fast. Highly recommended!&quot;
             </p>
             <p className="text-gray-800 font-semibold mt-4">- John Doe</p>
           </div>
           {/* Testimonial 2 */}
           <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <p className="text-gray-600 italic">
-              "Their one-time fix service was a lifesaver. Our site is now
-              secure and running smoothly."
+              &quot;Their one-time fix service was a lifesaver. Our site is now
+              secure and running smoothly.&quot;
             </p>
             <p className="text-gray-800 font-semibold mt-4">- Jane Smith</p>
           </div>
           {/* Testimonial 3 */}
           <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <p className="text-gray-600 italic">
-              "The team at FixDemonium is top-notch. They fixed our issues and
-              provided great advice for the future."
+              &quot;The team at FixDemonium is top-notch. They fixed our issues
+              and provided great advice for the future.&quot;
             </p>
             <p className="text-gray-800 font-semibold mt-4">- Michael Brown</p>
           </div>

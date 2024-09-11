@@ -184,14 +184,14 @@ export default function BackupRecoveryPage() {
         <p className="text-lg max-w-4xl mx-auto text-gray-700 mb-12 text-center">
           At Fixdemonium, we provide secure and reliable WordPress backup and
           recovery services. With automated backups, incremental options, and
-          cloud storage integration, we ensure your website’s data is always
-          protected. Whether you’re recovering from an error or just need peace
-          of mind, we’ve got your WordPress site covered.
+          cloud storage integration, we ensure your website&apos;s data is
+          always protected. Whether you&apos;re recovering from an error or just
+          need peace of mind, we&apos;ve got your WordPress site covered.
         </p>
         <p className="text-lg max-w-4xl mx-auto text-gray-700 text-center">
           Choose Fixdemonium for expert WordPress backup services that
-          prioritize your data's security. Our dedicated team ensures your site
-          is safe from data loss, hacking, or system failure with reliable
+          prioritize your data&apos;s security. Our dedicated team ensures your
+          site is safe from data loss, hacking, or system failure with reliable
           recovery solutions tailored to your needs.
         </p>
       </section>

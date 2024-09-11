@@ -80,8 +80,9 @@ export default function DiviSupportPage() {
               Divi Theme Customization
             </h3>
             <p className="text-gray-700">
-              Tailor the Divi theme to match your brand's identity. We create
-              stunning designs and layouts that resonate with your audience.
+              Tailor the Divi theme to match your brand&apos;s identity. We
+              create stunning designs and layouts that resonate with your
+              audience.
             </p>
           </div>
 
@@ -196,9 +197,9 @@ export default function DiviSupportPage() {
               1. Describe Your Divi Issue
             </h3>
             <p className="text-gray-700">
-              Share the problems you’re facing with your Divi theme. Whether
-              it’s a design, functionality, or performance issue, our experts
-              will review it and provide a clear solution plan.
+              Share the problems you&apos;re facing with your Divi theme.
+              Whether it&apos;s a design, functionality, or performance issue,
+              our experts will review it and provide a clear solution plan.
             </p>
           </div>
 
@@ -234,9 +235,9 @@ export default function DiviSupportPage() {
               3. Review & Pay
             </h3>
             <p className="text-gray-700">
-              Once you're satisfied with the fix, confirm the results, and pay.
-              We only charge you when you’re happy with the outcome, with no
-              hidden fees.
+              Once you&apos;re satisfied with the fix, confirm the results, and
+              pay. We only charge you when you&apos;re happy with the outcome,
+              with no hidden fees.
             </p>
           </div>
         </div>
@@ -251,30 +252,30 @@ export default function DiviSupportPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <div className="text-center bg-white p-6 rounded-lg">
             <p className="text-gray-700 italic mb-4">
-              "Five stars are not enough! I’d been delayed and put off by tech
-              services. Found Milos thru the Divi site.Awesome! Answer to
-              prayer!"
+              &quot;Five stars are not enough! I&apos;d been delayed and put off
+              by tech services. Found Milos thru the Divi site.Awesome! Answer
+              to prayer!&quot;
             </p>
             <p className="text-gray-900 font-semibold">- Nancy</p>
           </div>
           <div className="text-center bg-white p-6 rounded-lg">
             <p className="text-gray-700 italic mb-4">
-              "We’ve been working with Milos for a couple months in which time
-              he has delivered a great website. He is responsive so changes are
-              made quickly and is very easy to communicate with. His rates are
-              very competitive and he goes the extra mile."
+              &quot;We&apos;ve been working with Milos for a couple months in
+              which time he has delivered a great website. He is responsive so
+              changes are made quickly and is very easy to communicate with. His
+              rates are very competitive and he goes the extra mile.&quot;
             </p>
             <p className="text-gray-900 font-semibold">- Kirk W</p>
           </div>
           <div className="text-center bg-white p-6 rounded-lg">
             <p className="text-gray-700 italic mb-4">
-              "We have just started working with Milos but plan to make this an
-              ongoing support for our site. It’s saved our in-house team many
-              man-hours of frustration battling with WordPress. Response times
-              are rapid, excellent technical knowledge goes beyond WordPress and
-              it’s a very cost efficient way of being able to get your site to
-              do what you want and do it (technically) well. Highly recommend
-              Wrdprssifix’s services."
+              &quot;We have just started working with Milos but plan to make
+              this an ongoing support for our site. It&apos;s saved our in-house
+              team many man-hours of frustration battling with WordPress.
+              Response times are rapid, excellent technical knowledge goes
+              beyond WordPress and it&apos;s a very cost efficient way of being
+              able to get your site to do what you want and do it (technically)
+              well. Highly recommend Wrdprssifix&apos;s services.&quot;
             </p>
             <p className="text-gray-900 font-semibold">- joanne lacey</p>
           </div>

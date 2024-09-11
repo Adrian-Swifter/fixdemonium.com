@@ -135,8 +135,8 @@ export default function SupportTroubleshootingPage() {
               1. Describe Your Issue
             </h3>
             <p className="text-gray-700">
-              Tell us what's wrong, and we'll assess the issue and provide an
-              estimated timeline and cost.
+              Tell us what&apos;s wrong, and we&apos;ll assess the issue and
+              provide an estimated timeline and cost.
             </p>
           </div>
           <div className="text-center px-6">
@@ -167,8 +167,8 @@ export default function SupportTroubleshootingPage() {
               3. Confirm & Pay
             </h3>
             <p className="text-gray-700">
-              You only pay once you're completely satisfied with the results. No
-              hidden fees—just results.
+              You only pay once you&apos;re completely satisfied with the
+              results. No hidden fees—just results.
             </p>
           </div>
         </div>
@@ -232,7 +232,7 @@ export default function SupportTroubleshootingPage() {
         <h2 className="text-4xl font-bold mb-6">Need Support Now?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Get expert troubleshooting and support for your WordPress site,
-          available 24/7. Don't wait—fix your issues today.
+          available 24/7. Don&apos;t wait—fix your issues today.
         </p>
         <Link href="/contact-us">
           <span className="bg-white text-emerald-500 px-8 py-4 rounded-full font-semibold cursor-pointer transition-transform transform hover:scale-105">

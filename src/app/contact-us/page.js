@@ -47,8 +47,8 @@ export default function ContactPage() {
       <header className="text-center py-10">
         <h1 className="text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
         <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-          We'd love to hear from you! Please fill out the form below and we'll
-          get in touch with you shortly.
+          We&apos;d love to hear from you! Please fill out the form below and
+          we&apos;ll get in touch with you shortly.
         </p>
       </header>
 

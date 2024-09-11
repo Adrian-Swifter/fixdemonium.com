@@ -38,15 +38,15 @@ export default function OneTimeFixPage() {
             Why Choose Our One-Time Fix?
           </h2>
           <p className="text-gray-700 mb-4">
-            Whether it's a bug, a performance issue, or a security concern, our
-            experts are ready to help. We provide a quick diagnosis and solution
-            to your WordPress problems with a clear, upfront cost. No surprises,
-            just results.
+            Whether it&apos;s a bug, a performance issue, or a security concern,
+            our experts are ready to help. We provide a quick diagnosis and
+            solution to your WordPress problems with a clear, upfront cost. No
+            surprises, just results.
           </p>
           <p className="text-gray-700">
-            We don't just fix the problem—we ensure your website runs smoothly
-            and securely after the fix, giving you peace of mind and allowing
-            you to focus on your business.
+            We don&apos;t just fix the problem—we ensure your website runs
+            smoothly and securely after the fix, giving you peace of mind and
+            allowing you to focus on your business.
           </p>
         </div>
       </section>
@@ -215,30 +215,30 @@ export default function OneTimeFixPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <div className="text-center bg-white p-6 rounded-lg">
             <p className="text-gray-700 italic mb-4">
-              "Five stars are not enough! I’d been delayed and put off by tech
-              services. Found Milos thru the Divi site.Awesome! Answer to
-              prayer!"
+              &quot;Five stars are not enough! I&apos;d been delayed and put off
+              by tech services. Found Milos thru the Divi site.Awesome! Answer
+              to prayer!&quot;
             </p>
             <p className="text-gray-900 font-semibold">- Nancy</p>
           </div>
           <div className="text-center bg-white p-6 rounded-lg">
             <p className="text-gray-700 italic mb-4">
-              "We’ve been working with Milos for a couple months in which time
-              he has delivered a great website. He is responsive so changes are
-              made quickly and is very easy to communicate with. His rates are
-              very competitive and he goes the extra mile."
+              &quot;We&apos;ve been working with Milos for a couple months in
+              which time he has delivered a great website. He is responsive so
+              changes are made quickly and is very easy to communicate with. His
+              rates are very competitive and he goes the extra mile.&quot;
             </p>
             <p className="text-gray-900 font-semibold">- Kirk W</p>
           </div>
           <div className="text-center bg-white p-6 rounded-lg">
             <p className="text-gray-700 italic mb-4">
-              "We have just started working with Milos but plan to make this an
-              ongoing support for our site. It’s saved our in-house team many
-              man-hours of frustration battling with WordPress. Response times
-              are rapid, excellent technical knowledge goes beyond WordPress and
-              it’s a very cost efficient way of being able to get your site to
-              do what you want and do it (technically) well. Highly recommend
-              Wrdprssifix’s services."
+              &quot;We have just started working with Milos but plan to make
+              this an ongoing support for our site. It&apos;s saved our in-house
+              team many man-hours of frustration battling with WordPress.
+              Response times are rapid, excellent technical knowledge goes
+              beyond WordPress and it&apos;s a very cost efficient way of being
+              able to get your site to do what you want and do it (technically)
+              well. Highly recommend Wrdprssifix&apos;s services.&quot;
             </p>
             <p className="text-gray-900 font-semibold">- joanne lacey</p>
           </div>
