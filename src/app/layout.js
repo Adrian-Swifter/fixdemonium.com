@@ -51,7 +51,6 @@ export async function generateMetadata() {
     icons: {
       icon: "/favicon.ico",
     },
-    // Structured data (JSON-LD)
     structuredData: {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -78,17 +77,38 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
+        {/* Google Tag Manager */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-7FKRCR2KDB"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-7FKRCR2KDB');
+            `,
+          }}
+        />
+
         <Header />
         <main>{children}</main>
         <Footer />
+
+        {/* TrustPilot Script */}
         <Script id="trustpilot-script" strategy="afterInteractive">
           {`
             (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
-                a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
-                f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
-                tp('register', 'lpkpiB28EW8UVIQ5');
+            a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
+            f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
+            tp('register', 'lpkpiB28EW8UVIQ5');
           `}
         </Script>
+
         <LiveChat />
       </body>
     </html>
