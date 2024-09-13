@@ -94,30 +94,27 @@ export default function Home() {
     <>
       <main className={`container mx-auto px-4 md:px-0`}>
         {/* Hero Section */}
-        <div className="w-full py-24">
+        {/* Hero Section */}
+        <div className="w-full py-16 md:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
             <div className="text-center md:text-left">
-              <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
                 24/7 Expert WordPress Support & Maintenance
               </h1>
-              <p className={"text-xl md:text-2xl text-gray-700 mb-10 "}>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-6 md:mb-10">
                 Bringing order to your WordPress chaos. Fixdemonium fixes
                 issues, optimizes performance, and keeps your site secure.
               </p>
-              <div className="inline-flex space-x-4">
+              <div className="inline-flex space-x-2 sm:space-x-4">
                 <Link
                   href="/contact-us"
-                  className={
-                    "inline-block bg-emerald-400 text-white px-8 py-3 text-lg font-bold hover:bg-emerald-500 "
-                  }
+                  className="inline-block bg-emerald-400 text-white px-6 py-2 sm:px-8 sm:py-3 text-md sm:text-lg font-bold hover:bg-emerald-500"
                 >
                   Get a Quote
                 </Link>
                 <button
                   onClick={() => scrollToSection(trustpilotRef)}
-                  className={
-                    "inline-block bg-gray-200 text-gray-700 px-8 py-3 text-lg font-bold hover:bg-gray-300 "
-                  }
+                  className="inline-block bg-gray-200 text-gray-700 px-6 py-2 sm:px-8 sm:py-3 text-md sm:text-lg font-bold hover:bg-gray-300"
                 >
                   Read Reviews
                 </button>
@@ -129,6 +126,7 @@ export default function Home() {
                 alt="WordPress Support"
                 width={1200}
                 height={800}
+                className="w-full h-auto"
               />
             </div>
           </div>
