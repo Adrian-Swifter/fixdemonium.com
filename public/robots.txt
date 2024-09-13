@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.fixdemonium.com
+
+# Sitemaps
+Sitemap: https://www.fixdemonium.com/sitemap.xml
