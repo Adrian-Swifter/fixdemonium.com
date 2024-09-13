@@ -12,28 +12,37 @@ export async function POST(req) {
     },
   });
 
-  // try {
-  // Send the email
-  await transporter.sendMail({
-    from: `"${name}" <${email}>`, // sender address
-    to: "milosdraskovic1282@gmail.com", // list of receivers
-    subject: "Fixdemonium Contact Form Submission", // Subject line
-    html: `
+  // Verify the connection before sending the email
+  try {
+    await transporter.verify();
+
+    const mailData = {
+      from: `"${name}" <${email}>`, // Sender address
+      to: "milosdraskovic1282@gmail.com", // List of receivers
+      subject: "Fixdemonium Contact Form Submission", // Subject line
+      html: `
         <p>You have a new contact form submission:</p>
         <p><strong>Name: </strong> ${name}</p>
         <p><strong>Email: </strong> ${email}</p>
         <p><strong>Phone: </strong> ${phone}</p>
         <p><strong>Message: </strong> ${message}</p>
       `,
-  });
+    };
 
-  return new Response(JSON.stringify({ message: "Email sent successfully" }), {
-    status: 200,
-  });
-  // } catch (error) {
-  // console.error("Error sending email:", error);
-  // return new Response(JSON.stringify({ error: "Error sending email" }), {
-  //   status: 500,
-  // });
-  // }
+    // Send the email
+    await transporter.sendMail(mailData);
+
+    // Return a successful response
+    return new Response(
+      JSON.stringify({ message: "Email sent successfully" }),
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("Error sending email:", error);
+
+    // Return an error response
+    return new Response(JSON.stringify({ error: "Error sending email" }), {
+      status: 500,
+    });
+  }
 }
