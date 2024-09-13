@@ -70,8 +70,8 @@ export default function SupportTroubleshootingPage() {
             <Image
               src="/images/warning.png"
               alt="Error Troubleshooting"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -87,8 +87,8 @@ export default function SupportTroubleshootingPage() {
             <Image
               src="/images/performance-optimization.png"
               alt="Performance Optimization"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -104,8 +104,8 @@ export default function SupportTroubleshootingPage() {
             <Image
               src="/images/cyber-security.png"
               alt="Security Vulnerabilities"
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="mx-auto mb-6"
             />
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
