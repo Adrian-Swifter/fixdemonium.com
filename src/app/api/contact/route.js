@@ -3,10 +3,6 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
   const { name, email, phone, message } = await req.json();
 
-  // Log to check if environment variables are correctly loaded
-  console.log("EMAIL_USERNAME:", process.env.EMAIL_USERNAME);
-  console.log("EMAIL_APP_PASSWORD:", process.env.EMAIL_APP_PASSWORD);
-
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
