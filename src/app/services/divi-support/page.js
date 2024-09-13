@@ -31,7 +31,7 @@ export const metadata = {
     image: "/images/og-image.jpg",
   },
   alternates: {
-    canonical: "https://www.fixdemonium.com/divi-support",
+    canonical: "https://www.fixdemonium.com/services/divi-support",
   },
   robots: {
     index: true,
