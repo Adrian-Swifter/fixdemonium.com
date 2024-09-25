@@ -48,16 +48,13 @@ export async function generateMetadata({ params }) {
       description: metaDescription,
       images: [featuredImage],
     },
-    canonical: `https://fixdemonium.com/wordpress-tutorials/${slug}`,
-    alternates: {
-      canonical: `https://fixdemonium.com/wordpress-tutorials/${slug}`,
-    },
+    canonical: `https://www.fixdemonium.com/wordpress-tutorials/${slug}`,
     structuredData: {
       "@context": "https://schema.org",
       "@type": "Article",
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": `https://fixdemonium.com/wordpress-tutorials/${slug}`,
+        "@id": `https://www.fixdemonium.com/wordpress-tutorials/${slug}`,
       },
       headline: post.title.rendered,
       image: featuredImage,
