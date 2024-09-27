@@ -41,18 +41,18 @@ export default function CustomDevelopmentIntegrationPage() {
   return (
     <div className="container mx-auto px-6 py-10">
       {/* Hero Section */}
-      <section className="text-center py-20 bg-gradient-to-r from-emerald-500 to-green-400 text-white rounded-lg shadow-lg">
-        <h1 className="text-5xl font-bold mb-6">
+      <section className="text-center py-16 sm:py-20 bg-gradient-to-r from-emerald-500 to-green-400 text-white rounded-lg shadow-lg">
+        <h1 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-6 px-4">
           WordPress Custom Development & Integration
         </h1>
-        <p className="text-xl max-w-3xl mx-auto mb-8">
+        <p className="text-base sm:text-xl max-w-md sm:max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
           Unlock the full potential of your WordPress website with custom
           development and seamless integration. Tailor-made solutions for your
           unique business needs.
         </p>
         <div>
           <Link href="/contact-us">
-            <span className="bg-white text-emerald-500 px-8 py-3 rounded-full font-semibold cursor-pointer transition-transform transform hover:scale-105">
+            <span className="bg-white text-emerald-500 px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold cursor-pointer transition-transform transform hover:scale-105">
               Get a Custom Solution
             </span>
           </Link>

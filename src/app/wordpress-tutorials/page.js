@@ -8,7 +8,7 @@ export default function WordPressTutorials() {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPosts = async (page) => {
@@ -44,7 +44,6 @@ export default function WordPressTutorials() {
     }
   };
 
-  // Truncate the excerpt text
   const truncateExcerpt = (excerpt, maxLength = 150) => {
     return excerpt.length > maxLength
       ? excerpt.substring(0, maxLength) + "..."
@@ -70,11 +69,10 @@ export default function WordPressTutorials() {
               className={`flex flex-col md:flex-row ${
                 index % 2 === 1 ? "md:flex-row-reverse" : ""
               } bg-white shadow-md rounded-lg overflow-hidden`}
-              style={{ minHeight: "300px", maxHeight: "300px" }} // Increased fixed height
             >
               {/* Image Section */}
               {post._embedded && post._embedded["wp:featuredmedia"] && (
-                <div className="md:w-1/2 h-full">
+                <div className="md:w-1/2 h-64">
                   <Image
                     src={post._embedded["wp:featuredmedia"][0].source_url}
                     alt={post.title.rendered}

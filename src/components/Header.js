@@ -51,7 +51,7 @@ export default function Header() {
             href="/services/ongoing-wordpress-support"
             className="text-gray-700 hover:text-teal-600"
           >
-            Montly Support
+            Monthly Support
           </Link>
           <div
             className="relative group"
@@ -75,6 +75,7 @@ export default function Header() {
             </button>
             {isServicesOpen && (
               <div className="absolute left-0 top-full mt-2 w-[280px] md:w-[350px] lg:w-[400px] bg-white border border-gray-200 shadow-lg rounded-lg grid grid-cols-2 p-4 gap-4">
+                {/* Services Links */}
                 <Link
                   href="/services/support-troubleshooting"
                   onClick={() => {
@@ -125,12 +126,7 @@ export default function Header() {
                     fill="currentColor"
                     viewBox="0 0 512 512"
                   >
-                    <path
-                      d="M256.001,0L29.89,130.537c0,47.476,4.506,88.936,12.057,125.463C88.61,481.721,256.001,512,256.001,512
-                s167.389-30.279,214.053-256c7.551-36.527,12.057-77.986,12.057-125.463L256.001,0z M256.118,466.723
-                c-0.035-0.012-0.082-0.028-0.117-0.039v-47.672V256H140.77H91.122c-6.67-29.738-11.109-63.506-12.394-101.93L255.999,51.728h0.002
-                v51.73V256h115.27h49.625C385.636,413.404,287.327,456.774,256.118,466.723z"
-                    />
+                    <path d="M256.001,0L29.89,130.537c0,47.476,4.506,88.936,12.057,125.463C88.61,481.721,256.001,512,256.001,512 s167.389-30.279,214.053-256c7.551-36.527,12.057-77.986,12.057-125.463L256.001,0z M256.118,466.723 c-0.035-0.012-0.082-0.028-0.117-0.039v-47.672V256H140.77H91.122c-6.67-29.738-11.109-63.506-12.394-101.93L255.999,51.728h0.002 v51.73V256h115.27h49.625C385.636,413.404,287.327,456.774,256.118,466.723z" />
                   </svg>
                   <span>Security & Malware Removal</span>
                 </Link>
@@ -270,14 +266,14 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href="/about"
+              href="/services/ongoing-wordpress-support"
               onClick={() => {
                 setIsOpen(false);
                 setIsServicesOpen(false);
               }}
               className="block text-gray-700 hover:text-teal-600"
             >
-              About
+              Monthly Support
             </Link>
             <div>
               <button
@@ -366,6 +362,16 @@ export default function Header() {
                 </div>
               )}
             </div>
+            <Link
+              href="/wordpress-tutorials"
+              onClick={() => {
+                setIsOpen(false);
+                setIsServicesOpen(false);
+              }}
+              className="block text-gray-700 hover:text-teal-600"
+            >
+              Blog
+            </Link>
             <Link
               href="/contact-us"
               onClick={() => {
