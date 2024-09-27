@@ -34,6 +34,7 @@ body {
   overflow: hidden;
   max-width: 100%;
   background: #000;
+  margin-bottom: 2rem;
 }
 
 .nv-iframe-embed iframe {
