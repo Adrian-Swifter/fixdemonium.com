@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import LiveChat from "../components/LiveChat";
+import ChatConversionTracker from "../components/ChatConversionTracker"; // Import the client component
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -110,6 +111,9 @@ export default function RootLayout({ children }) {
         </Script>
 
         <LiveChat />
+
+        {/* Include the Chat Conversion Tracker here */}
+        <ChatConversionTracker />
       </body>
     </html>
   );
