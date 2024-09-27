@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import { decode } from "he";
 import WordPressPostClient from "@/components/WordPressPostClient";
 
@@ -22,7 +21,7 @@ export async function generateMetadata({ params }) {
 
   const featuredImage =
     post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-    "https://fixdemonium.com/default-image.jpg";
+    "https://www.fixdemonium.com/default-image.jpg";
   const publishedDate = new Date(post.date).toISOString();
 
   return {
@@ -31,7 +30,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${post.title.rendered} | WordPress Tutorials`,
       description: metaDescription,
-      url: `https://fixdemonium.com/wordpress-tutorials/${slug}`,
+      url: `https://www.fixdemonium.com/wordpress-tutorials/${slug}`,
       type: "article",
       images: [
         {
@@ -69,7 +68,7 @@ export async function generateMetadata({ params }) {
         name: "Fixdemonium",
         logo: {
           "@type": "ImageObject",
-          url: "https://fixdemonium.com/images/logo.png",
+          url: "https://www.fixdemonium.com/images/logo.png",
         },
       },
       description: metaDescription,
