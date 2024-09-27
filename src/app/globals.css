@@ -27,7 +27,7 @@ body {
   }
 }
 
-.responsive-embed {
+.nv-iframe-embed {
   position: relative;
   padding-bottom: 56.25%; /* Aspect ratio: 16:9 */
   height: 0;
@@ -36,7 +36,7 @@ body {
   background: #000;
 }
 
-.responsive-embed iframe {
+.nv-iframe-embed iframe {
   position: absolute;
   top: 0;
   left: 0;
