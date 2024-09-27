@@ -32,6 +32,21 @@ export default function WordPressTutorials() {
     fetchPosts(currentPage);
   }, [currentPage]);
 
+  useEffect(() => {
+    // Select all iframes in the rendered content
+    const iframes = document.querySelectorAll("iframe");
+
+    iframes.forEach((iframe) => {
+      // Create a wrapper div
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("responsive-embed");
+
+      // Insert the wrapper before the iframe and move the iframe inside the wrapper
+      iframe.parentNode.insertBefore(wrapper, iframe);
+      wrapper.appendChild(iframe);
+    });
+  }, []);
+
   const handleNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage((prevPage) => prevPage + 1);
