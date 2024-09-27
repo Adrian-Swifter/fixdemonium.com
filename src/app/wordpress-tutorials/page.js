@@ -74,7 +74,11 @@ export default function WordPressTutorials() {
               {post._embedded && post._embedded["wp:featuredmedia"] && (
                 <div className="md:w-1/2 h-64">
                   <Image
-                    src={post._embedded["wp:featuredmedia"][0].source_url}
+                    src={
+                      post._embedded && post._embedded["wp:featuredmedia"]
+                        ? post._embedded["wp:featuredmedia"][0].source_url
+                        : "/images/default.jpg"
+                    }
                     alt={post.title.rendered}
                     width={400}
                     height={300}
