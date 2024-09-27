@@ -49,7 +49,7 @@ export default function WordPressTutorials() {
       ? excerpt.substring(0, maxLength) + "..."
       : excerpt;
   };
-  console.log(posts);
+
   return (
     <div className="container mx-auto px-6 py-10">
       <h1 className="text-4xl font-bold text-center mb-10">
@@ -75,9 +75,11 @@ export default function WordPressTutorials() {
                 <div className="md:w-1/2 h-64">
                   <Image
                     src={
-                      post._embedded && post._embedded["wp:featuredmedia"]
+                      post._embedded &&
+                      post._embedded["wp:featuredmedia"] &&
+                      !post._embedded["wp:featuredmedia"][0].code
                         ? post._embedded["wp:featuredmedia"][0].source_url
-                        : "/images/default.jpg"
+                        : "/images/default.jpg" // Fallback image URL
                     }
                     alt={post.title.rendered}
                     width={400}
