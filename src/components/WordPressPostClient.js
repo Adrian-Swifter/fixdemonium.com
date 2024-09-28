@@ -57,9 +57,13 @@ export default function WordPressPostClient() {
   });
 
   return (
-    <div className="container mx-auto flex flex-col md:flex-row px-6 py-10">
+    <div className="container mx-auto flex flex-col md:flex-row gap-6 px-6 py-10">
+      {" "}
+      {/* Added gap-6 for spacing */}
       {/* Main Content */}
-      <article className="md:w-3/4">
+      <article className="md:w-3/4 mb-8 md:mb-0">
+        {" "}
+        {/* Added mb-8 for spacing on mobile */}
         {featuredImage && (
           <div className="mb-10">
             <Image
@@ -71,7 +75,6 @@ export default function WordPressPostClient() {
             />
           </div>
         )}
-
         <header className="mb-8">
           <h1
             className="text-4xl font-bold text-gray-900 mb-4"
@@ -82,14 +85,12 @@ export default function WordPressPostClient() {
             <em>Published on {publishedDate}</em>
           </p>
         </header>
-
         {/* Apply the Prose Class */}
         <section
           className="prose lg:prose-xl max-w-none text-gray-700"
           dangerouslySetInnerHTML={{ __html: post.content.rendered }}
         />
       </article>
-
       {/* Sidebar */}
       <aside className="md:w-1/4 md:pl-10">
         <div className="sticky top-20 space-y-8">
