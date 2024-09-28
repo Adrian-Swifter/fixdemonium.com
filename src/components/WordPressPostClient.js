@@ -57,13 +57,13 @@ export default function WordPressPostClient() {
   });
 
   return (
-    <div className="container mx-auto flex flex-col md:flex-row gap-6 px-6 py-10">
+    <div className="container mx-auto flex flex-col lg:flex-row gap-6 px-6 py-10">
       {" "}
-      {/* Added gap-6 for spacing */}
+      {/* Changed md to lg for stacking */}
       {/* Main Content */}
-      <article className="md:w-3/4 mb-8 md:mb-0">
+      <article className="lg:w-3/4 mb-8 lg:mb-0">
         {" "}
-        {/* Added mb-8 for spacing on mobile */}
+        {/* Adjusted for stacking at lg */}
         {featuredImage && (
           <div className="mb-10">
             <Image
@@ -92,7 +92,9 @@ export default function WordPressPostClient() {
         />
       </article>
       {/* Sidebar */}
-      <aside className="md:w-1/4 md:pl-10">
+      <aside className="lg:w-1/4 lg:pl-10 w-full">
+        {" "}
+        {/* Set w-full on smaller screens */}
         <div className="sticky top-20 space-y-8">
           <div className="bg-emerald-100 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
