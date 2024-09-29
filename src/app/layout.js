@@ -59,9 +59,9 @@ export async function generateMetadata() {
       url: "https://www.fixdemonium.com",
       logo: "https://www.fixdemonium.com/images/logo.png",
       sameAs: [
-        "https://www.facebook.com/Fixdemonium",
-        "https://www.twitter.com/Fixdemonium",
-        "https://www.linkedin.com/company/fixdemonium",
+        "https://www.facebook.com/fixdemonium/",
+        "https://x.com/fixdemonium",
+        "https://www.linkedin.com/company/fixdemonium/",
       ],
       contactPoint: {
         "@type": "ContactPoint",
@@ -77,6 +77,15 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+      </head>
       <body className={poppins.className}>
         {/* Google Tag Manager */}
         <Script

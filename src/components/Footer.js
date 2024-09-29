@@ -10,12 +10,6 @@ const poppins = Poppins({
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
-    { href: "#", label: "Facebook", svgPath: "<SVG_PATH_FOR_FACEBOOK>" },
-    { href: "#", label: "Twitter", svgPath: "<SVG_PATH_FOR_TWITTER>" },
-    // Add more social links as needed
-  ];
-
   const footerLinks = [
     {
       title: "About",
@@ -56,23 +50,39 @@ export default function Footer() {
             <li>Phone: +381600178093</li>
             <li>Location: Belgrade, Serbia</li>
           </ul>
-          <div className="flex space-x-4 mt-4">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                aria-label={link.label}
-                className="text-gray-600 hover:text-teal-600"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  dangerouslySetInnerHTML={{ __html: link.svgPath }}
-                />
-              </a>
-            ))}
+          <div className="flex space-x-6 mt-4">
+            <a
+              href="https://www.facebook.com/fixdemonium/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-500 hover:text-emerald-600 text-3xl"
+            >
+              <i className="fab fa-facebook-square"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/fixdemonium/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-500 hover:text-emerald-600 text-3xl"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@fixdemonium.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-500 hover:text-emerald-600 text-3xl"
+            >
+              <i className="fab fa-tiktok"></i>
+            </a>
+            <a
+              href="https://x.com/fixdemonium"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-500 hover:text-emerald-600 text-3xl"
+            >
+              <i className="fab fa-x-twitter"></i>
+            </a>
           </div>
         </>
       ),
