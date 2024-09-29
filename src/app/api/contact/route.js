@@ -16,7 +16,7 @@ export async function POST(req) {
 
     const mailData = {
       from: `"${name}" <${email}>`, // Sender address
-      to: "milosdraskovic1282@gmail.com", // Receiver email
+      to: "support@fixdemonium.com", // Receiver email
       subject: "Fixdemonium Contact Form Submission",
       html: `
         <p>You have a new contact form submission:</p>
