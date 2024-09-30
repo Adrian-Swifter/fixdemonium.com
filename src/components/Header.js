@@ -74,7 +74,7 @@ export default function Header() {
               </svg>
             </button>
             {isServicesOpen && (
-              <div className="absolute left-0 top-full mt-2 w-[280px] md:w-[350px] lg:w-[400px] bg-white border border-gray-200 shadow-lg rounded-lg grid grid-cols-2 p-4 gap-4">
+              <div className="absolute left-0 top-full mt-2 w-[280px] md:w-[350px] lg:w-[400px] bg-white border border-gray-200 shadow-lg rounded-lg grid grid-cols-2 p-4 gap-4 z-10">
                 {/* Services Links */}
                 <Link
                   href="/services/support-troubleshooting"
