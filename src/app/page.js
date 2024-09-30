@@ -102,9 +102,15 @@ export default function Home() {
                 24/7 Expert WordPress Support & Maintenance
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-6 md:mb-10">
-                Bringing order to your WordPress chaos. Fixdemonium fixes
-                issues, optimizes performance, and keeps your site secure.
+                Fixdemonium offers the most affordable WordPress help, starting
+                at just{" "}
+                <span className="bg-emerald-400 text-white font-bold px-2 py-1 rounded-lg">
+                  $25
+                </span>{" "}
+                per hour/fix. We fix issues, optimize performance, and keep your
+                site secure.
               </p>
+
               <div className="inline-flex space-x-2 sm:space-x-4">
                 <Link
                   href="/contact-us"

@@ -125,7 +125,7 @@ export default function ServicesSection() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <StepColumn
-            title="One Time Fix"
+            title="One-Time Fix"
             steps={oneTimeFixSteps}
             hoveredStep={hoveredStepOneTime}
             setHoveredStep={setHoveredStepOneTime}

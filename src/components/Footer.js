@@ -128,7 +128,8 @@ export default function Footer() {
         ))}
       </div>
       <div className="text-center text-gray-500 text-sm mt-8">
-        &copy; {currentYear} FixDemonium. All rights reserved.
+        &copy; {currentYear} Fixdemonium. All rights reserved. Disclaimer: We
+        are not affiliated with the WordPress Foundation or Automattic, Inc.
       </div>
     </footer>
   );
