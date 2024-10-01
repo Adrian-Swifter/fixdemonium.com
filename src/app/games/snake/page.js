@@ -47,19 +47,18 @@ export default function SnakeGame() {
     const newSnake = [...snake];
     const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
 
-    // Allow snake to get closer to the wall before game over
-    const wallPadding = 1;
+    // Properly handle wall collision without padding issues
     if (
-      head.x < wallPadding ||
-      head.y < wallPadding ||
-      head.x >= canvasRef.current.width / gridSize - wallPadding ||
-      head.y >= canvasRef.current.height / gridSize - wallPadding
+      head.x < 0 ||
+      head.y < 0 ||
+      head.x >= canvasRef.current.width / gridSize ||
+      head.y >= canvasRef.current.height / gridSize
     ) {
       setGameOver(true);
       return;
     }
 
-    // Check for self collision
+    // Check for self-collision
     for (let i = 1; i < newSnake.length; i++) {
       if (newSnake[i].x === head.x && newSnake[i].y === head.y) {
         setGameOver(true);
@@ -150,6 +149,30 @@ export default function SnakeGame() {
     };
   }, [playingWith, snake, food, direction, mattImg, wpEngineIcon]);
 
+  // Make canvas responsive based on window size
+  useEffect(() => {
+    const resizeCanvas = () => {
+      if (canvasRef.current) {
+        const canvas = canvasRef.current;
+
+        const maxWidth = window.innerWidth - 40; // Add padding
+        const maxHeight = window.innerHeight - 200; // Add padding for controls
+        const size = Math.min(maxWidth, maxHeight, 400); // Set max size
+
+        canvas.width = size;
+        canvas.height = size;
+
+        // Redraw game elements to fit the new canvas size
+        drawGame();
+      }
+    };
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas(); // Call on mount
+
+    return () => window.removeEventListener("resize", resizeCanvas);
+  }, [playingWith]);
+
   const startGame = (mode) => {
     setPlayingWith(mode);
     setSnake([{ x: 10, y: 10 }]);
@@ -183,13 +206,13 @@ export default function SnakeGame() {
             <p className="text-lg text-gray-300 mb-6">Your Score: {score}</p>
             <button
               onClick={() => startGame(playingWith)}
-              className="bg-blue-500 px-6 py-3 rounded text-white font-semibold mb-4"
+              className="bg-blue-500 px-6 py-3 rounded text-white font-semibold mb-4 w-full text-center"
             >
               Start New Game
             </button>
             <button
               onClick={shareScore}
-              className="bg-green-500 px-6 py-3 rounded text-white flex items-center justify-center"
+              className="bg-green-500 px-6 py-3 rounded text-white flex items-center justify-center w-full"
             >
               <i className="fab fa-x-twitter mr-2"></i> Share on X
             </button>
@@ -218,12 +241,7 @@ export default function SnakeGame() {
           </button>
         </div>
       )}
-      <canvas
-        ref={canvasRef}
-        width="400"
-        height="400"
-        className="border-4 border-white mb-4"
-      ></canvas>
+      <canvas ref={canvasRef} className="border-4 border-white mb-4"></canvas>
       {playingWith && (
         <div className="fixed bottom-0 left-0 w-full grid grid-cols-3 gap-4 p-4 bg-gray-800">
           <button

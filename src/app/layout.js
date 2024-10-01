@@ -3,8 +3,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
-import LiveChat from "../components/LiveChat";
-import ChatConversionTracker from "../components/ChatConversionTracker"; // Import the client component
+import ClientLayout from "./ClientLayout";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -123,8 +122,10 @@ export default function RootLayout({ children }) {
         />
 
         <Header />
-        <main>{children}</main>
-        <Footer />
+        <main>
+          {/* Render the client-side logic */}
+          <ClientLayout>{children}</ClientLayout>
+        </main>
 
         {/* TrustPilot Script */}
         <Script id="trustpilot-script" strategy="afterInteractive">
@@ -135,11 +136,7 @@ export default function RootLayout({ children }) {
             tp('register', 'lpkpiB28EW8UVIQ5');
           `}
         </Script>
-
-        <LiveChat />
-
-        {/* Include the Chat Conversion Tracker here */}
-        <ChatConversionTracker />
+        <Footer />
       </body>
     </html>
   );
