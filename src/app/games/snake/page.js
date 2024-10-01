@@ -23,7 +23,7 @@ export default function SnakeGame() {
         return img;
       };
 
-      setMattImg(loadImage("/images/matt.png")); // Update image path if necessary
+      setMattImg(loadImage("/images/matt.png"));
       setWpEngineIcon(loadImage("/images/wp-engine.svg"));
     }
   }, []);
@@ -44,16 +44,16 @@ export default function SnakeGame() {
   const updateGame = () => {
     if (gameOver) return;
 
-    // Update snake position
     const newSnake = [...snake];
     const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
 
-    // Check for wall collision
+    // Allow snake to get closer to the wall before game over
+    const wallPadding = 1;
     if (
-      head.x < 0 ||
-      head.y < 0 ||
-      head.x >= canvasRef.current.width / gridSize ||
-      head.y >= canvasRef.current.height / gridSize
+      head.x < wallPadding ||
+      head.y < wallPadding ||
+      head.x >= canvasRef.current.width / gridSize - wallPadding ||
+      head.y >= canvasRef.current.height / gridSize - wallPadding
     ) {
       setGameOver(true);
       return;
@@ -67,21 +67,17 @@ export default function SnakeGame() {
       }
     }
 
-    // Move snake
     newSnake.unshift(head);
 
-    // Check if the snake eats the food
+    // Check if snake eats the food
     if (head.x === food.x && head.y === food.y) {
-      // Increase score
       setScore(score + 1);
-
-      // Spawn new food
       setFood({
         x: Math.floor(Math.random() * (canvasRef.current.width / gridSize)),
         y: Math.floor(Math.random() * (canvasRef.current.height / gridSize)),
       });
     } else {
-      newSnake.pop(); // Remove the tail if no food eaten
+      newSnake.pop();
     }
 
     setSnake(newSnake);
@@ -89,9 +85,8 @@ export default function SnakeGame() {
 
   const drawGame = () => {
     const ctx = canvasRef.current.getContext("2d");
-    ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height); // Clear the canvas
+    ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
 
-    // Set background color
     ctx.fillStyle = "#282c34";
     ctx.fillRect(0, 0, canvasRef.current.width, canvasRef.current.height);
 
@@ -114,7 +109,6 @@ export default function SnakeGame() {
       );
     }
 
-    // Draw snake
     snake.forEach((segment) => {
       if (playingWith === "matt" && mattImg) {
         ctx.drawImage(
@@ -135,19 +129,18 @@ export default function SnakeGame() {
       }
     });
 
-    // Draw score
     ctx.fillStyle = "white";
     ctx.font = "20px Arial";
     ctx.fillText(`Score: ${score}`, 10, 20);
   };
 
   useEffect(() => {
-    if (!playingWith) return; // Wait for user to select playing mode
+    if (!playingWith) return;
 
     const interval = setInterval(() => {
       updateGame();
       drawGame();
-    }, 150); // Speed of the game
+    }, 150);
 
     window.addEventListener("keydown", handleKeyDown);
 
@@ -159,15 +152,15 @@ export default function SnakeGame() {
 
   const startGame = (mode) => {
     setPlayingWith(mode);
-    setSnake([{ x: 10, y: 10 }]); // Reset snake
-    setFood({ x: 15, y: 15 }); // Reset food
-    setDirection({ x: 1, y: 0 }); // Reset direction
-    setGameOver(false); // Reset game over state
-    setScore(0); // Reset score
+    setSnake([{ x: 10, y: 10 }]);
+    setFood({ x: 15, y: 15 });
+    setDirection({ x: 1, y: 0 });
+    setGameOver(false);
+    setScore(0);
   };
 
   const shareScore = () => {
-    const shareText = `I just scored ${score} points in Matt vs WP Engine Snake game! Try it at yourdomain.com!`;
+    const shareText = `I just scored ${score} points in Matt vs WP Engine Snake game! Try it at https://www.fixdemonium.com/games/snake!`;
     const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
       shareText
     )}`;
@@ -232,7 +225,7 @@ export default function SnakeGame() {
         className="border-4 border-white mb-4"
       ></canvas>
       {playingWith && (
-        <div className="grid grid-cols-3 gap-4 mb-4">
+        <div className="fixed bottom-0 left-0 w-full grid grid-cols-3 gap-4 p-4 bg-gray-800">
           <button
             onClick={() => handleTouch("left")}
             className="bg-gray-700 p-4 rounded flex justify-center items-center"
