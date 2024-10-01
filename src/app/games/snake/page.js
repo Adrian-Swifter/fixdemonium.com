@@ -204,7 +204,7 @@ export default function SnakeGame() {
           </button>
           <button
             onClick={() => startGame("wp-engine")}
-            className="bg-green-500 px-4 py-2 rounded text-white flex items-center"
+            className="bg-white px-4 py-2 rounded text-green-500 flex items-center"
           >
             Play with WP Engine
             <img
