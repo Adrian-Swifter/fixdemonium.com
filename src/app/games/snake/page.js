@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 
 export default function SnakeGame() {
   const canvasRef = useRef(null);
+  const containerRef = useRef(null); // Ref for the container that holds the canvas
   const [playingWith, setPlayingWith] = useState(""); // 'matt' or 'wp-engine'
   const [snake, setSnake] = useState([{ x: 10, y: 10 }]); // Snake's initial position
   const [food, setFood] = useState({ x: 15, y: 15 }); // Food initial position
@@ -182,6 +183,11 @@ export default function SnakeGame() {
     setScore(0);
   };
 
+  // Scroll the canvas container to the top
+  if (containerRef.current) {
+    containerRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+
   const shareScore = () => {
     const shareText = `I just scored ${score} points in Matt vs WP Engine Snake game! Try it at https://www.fixdemonium.com/games/snake!`;
     const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
@@ -212,7 +218,7 @@ export default function SnakeGame() {
             </button>
             <button
               onClick={shareScore}
-              className="bg-green-500 px-6 py-3 rounded text-white flex items-center justify-center w-full"
+              className="bg-emerald-400 px-6 py-3 rounded text-white flex items-center justify-center w-full"
             >
               <i className="fab fa-x-twitter mr-2"></i> Share on X
             </button>
@@ -230,7 +236,7 @@ export default function SnakeGame() {
           </button>
           <button
             onClick={() => startGame("wp-engine")}
-            className="bg-green-500 px-4 py-2 rounded text-white flex items-center"
+            className="bg-white px-4 py-2 rounded text-emerald-400 flex items-center"
           >
             Play with WP Engine
             <img
