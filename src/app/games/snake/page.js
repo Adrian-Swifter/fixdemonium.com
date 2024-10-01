@@ -181,12 +181,14 @@ export default function SnakeGame() {
     setDirection({ x: 1, y: 0 });
     setGameOver(false);
     setScore(0);
-  };
 
-  // Scroll the canvas container to the top
-  if (containerRef.current) {
-    containerRef.current.scrollIntoView({ behavior: "smooth" });
-  }
+    // Use setTimeout to wait for a render cycle before scrolling
+    setTimeout(() => {
+      if (containerRef.current) {
+        containerRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 0); // Small timeout to ensure rendering is done
+  };
 
   const shareScore = () => {
     const shareText = `I just scored ${score} points in Matt vs WP Engine Snake game! Try it at https://www.fixdemonium.com/games/snake!`;
@@ -247,7 +249,10 @@ export default function SnakeGame() {
           </button>
         </div>
       )}
-      <canvas ref={canvasRef} className="border-4 border-white mb-4"></canvas>
+      <div ref={containerRef} className="mb-4">
+        <canvas ref={canvasRef} className="border-4 border-white mb-4"></canvas>
+      </div>
+
       {playingWith && (
         <div className="fixed bottom-0 left-0 w-full grid grid-cols-3 gap-4 p-4 bg-gray-800">
           <button
