@@ -11,14 +11,22 @@ export default function SnakeGame() {
   const [score, setScore] = useState(0);
   const gridSize = 20; // Size of each grid in the game
 
-  const loadImage = (src) => {
-    const img = new Image();
-    img.src = src;
-    return img;
-  };
+  const [mattImg, setMattImg] = useState(null);
+  const [wpEngineIcon, setWpEngineIcon] = useState(null);
 
-  const mattImg = loadImage("../images/matt.png"); // Load Matt's image from public directory
-  const wpEngineIcon = loadImage("../images/wp-engine.svg"); // Load WP Engine SVG from public directory
+  // Load images only when on the client (after component mounts)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const loadImage = (src) => {
+        const img = new Image();
+        img.src = src;
+        return img;
+      };
+
+      setMattImg(loadImage("/images/matt.png")); // Update image path if necessary
+      setWpEngineIcon(loadImage("/images/wp-engine.svg"));
+    }
+  }, []);
 
   const handleKeyDown = (e) => {
     if (!gameOver) {
@@ -88,7 +96,7 @@ export default function SnakeGame() {
     ctx.fillRect(0, 0, canvasRef.current.width, canvasRef.current.height);
 
     // Draw food
-    if (playingWith === "matt") {
+    if (playingWith === "matt" && wpEngineIcon) {
       ctx.drawImage(
         wpEngineIcon,
         food.x * gridSize,
@@ -96,7 +104,7 @@ export default function SnakeGame() {
         gridSize,
         gridSize
       );
-    } else {
+    } else if (mattImg) {
       ctx.drawImage(
         mattImg,
         food.x * gridSize,
@@ -107,8 +115,8 @@ export default function SnakeGame() {
     }
 
     // Draw snake
-    snake.forEach((segment, index) => {
-      if (playingWith === "matt") {
+    snake.forEach((segment) => {
+      if (playingWith === "matt" && mattImg) {
         ctx.drawImage(
           mattImg,
           segment.x * gridSize,
@@ -116,7 +124,7 @@ export default function SnakeGame() {
           gridSize,
           gridSize
         );
-      } else {
+      } else if (wpEngineIcon) {
         ctx.drawImage(
           wpEngineIcon,
           segment.x * gridSize,
@@ -147,7 +155,7 @@ export default function SnakeGame() {
       clearInterval(interval);
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [playingWith, snake, food, direction]);
+  }, [playingWith, snake, food, direction, mattImg, wpEngineIcon]);
 
   const startGame = (mode) => {
     setPlayingWith(mode);
@@ -176,21 +184,23 @@ export default function SnakeGame() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
       {gameOver && (
-        <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 bg-gray-800 p-8 rounded-md shadow-lg z-50">
-          <h1 className="text-2xl mb-4">Game Over!</h1>
-          <p className="mb-4">Your Score: {score}</p>
-          <button
-            onClick={() => startGame(playingWith)}
-            className="bg-blue-500 px-4 py-2 rounded text-white mr-2 mb-2 flex-1"
-          >
-            Start New Game
-          </button>
-          <button
-            onClick={shareScore}
-            className="bg-green-500 px-6 py-3 rounded text-white flex items-center justify-center"
-          >
-            <i className="fab fa-x-twitter mr-2"></i> Share on X
-          </button>
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-gray-800 p-8 rounded-lg shadow-lg text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Game Over!</h1>
+            <p className="text-lg text-gray-300 mb-6">Your Score: {score}</p>
+            <button
+              onClick={() => startGame(playingWith)}
+              className="bg-blue-500 px-6 py-3 rounded text-white font-semibold mb-4"
+            >
+              Start New Game
+            </button>
+            <button
+              onClick={shareScore}
+              className="bg-green-500 px-6 py-3 rounded text-white flex items-center justify-center"
+            >
+              <i className="fab fa-x-twitter mr-2"></i> Share on X
+            </button>
+          </div>
         </div>
       )}
       {!playingWith && (
@@ -200,15 +210,15 @@ export default function SnakeGame() {
             className="bg-blue-500 px-4 py-2 rounded text-white flex items-center"
           >
             Play with Matt
-            <img src="../images/matt.png" alt="Matt" className="w-6 h-6 ml-2" />
+            <img src="/images/matt.png" alt="Matt" className="w-6 h-6 ml-2" />
           </button>
           <button
             onClick={() => startGame("wp-engine")}
-            className="bg-white px-4 py-2 rounded text-green-500 flex items-center"
+            className="bg-green-500 px-4 py-2 rounded text-white flex items-center"
           >
             Play with WP Engine
             <img
-              src="../images/wp-engine.svg"
+              src="/images/wp-engine.svg"
               alt="WP Engine"
               className="w-6 h-6 ml-2"
             />
