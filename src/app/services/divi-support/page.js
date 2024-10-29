@@ -11,7 +11,7 @@ export const metadata = {
     title: "Expert Divi Support & Troubleshooting | Fixdemonium",
     description:
       "Fixdemonium offers expert Divi support and troubleshooting services to ensure your website runs smoothly. Get fast, reliable help with Divi customization, performance optimization, and more.",
-    url: "https://www.fixdemonium.com/divi-support",
+    url: "https://www.fixdemonium.com/services/divi-support",
     siteName: "Fixdemonium",
     images: [
       {
